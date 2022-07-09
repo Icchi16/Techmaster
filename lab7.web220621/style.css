@@ -1,0 +1,40 @@
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.back-to-top {
+  width: auto;
+
+  bottom: 10px;
+  right: 10px;
+}
+
+.call {
+  width: auto;
+
+  bottom: 70px;
+  right: 10px;
+}
+
+.back-to-top img,
+.call img {
+  width: 50px;
+  height: 50px;
+}
+
+.text {
+  text-align: right;
+  white-space: nowrap;
+  right: 100%;
+  bottom: 50%;
+  visibility: hidden;
+  transform: translateY(50%);
+}
+
+.back-to-top:hover .text, .call:hover .text {
+  visibility: visible;
+}

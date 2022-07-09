@@ -1,0 +1,91 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.3em;
+  margin: auto;
+  max-width: 40em;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(61, 117, 202);
+  margin: 0 auto;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+small {
+  text-align: center;
+  font-style: italic;
+}
+
+.section {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.blog-container {
+  background: #ececec;
+  padding: 20px;
+}
+
+.name-container {
+  color: #929292;
+  font-size: 12px;
+}
+
+.name-container div {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.name-container div img {
+  display: inline-block;
+  max-width: 1em;
+  margin-right: 5px;
+  filter: invert(59%) sepia(10%) saturate(8%) hue-rotate(356deg) brightness(96%)
+    contrast(89%);
+}
+
+.text-opening {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.toc-container {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #edf6ff;
+  border: 1px solid black;
+  padding: 15px 10px;
+  margin-bottom: 50px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.toc-container ol li {
+  line-height: 1.4em;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.toc-container ol li ul li {
+  font-weight: 300;
+  list-style: disc;
+}

@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+ul li {
+  line-height: 200%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body-text {
+  margin: auto 40px;
+}
+
+.full-screen-width {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.text-h1 {
+  color: whitesmoke;
+  font-size: 56px;
+  font-weight: 300;
+}
+
+.text-centered {
+  position: absolute;
+  top: 50%;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  position: relative;
+  text-align: center;
+}
+
+.view-count {
+  color: rgb(103, 120, 138);
+  font-size: 14px;
+}
+
+.table-format {
+  border-radius: 10px;
+  border: 1px solid rgb(218, 221, 225);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cell-format {
+  padding: 10px;
+}
+
+.image-cell-format {
+  width: 13;
+  width: 1em;
+  background-color: rgb(233, 235, 238);
+  vertical-align: top;
+}
+
+.image-format {
+  max-width: 18px;
+  object-fit: cover;
+}
+
+.text-note {
+  font-size: 14px;
+}
+
+.button {
+  display: block;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+  background: rgb(53, 120, 229);
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  transition: 0.4s;
+}
+
+.button-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.45px;
+  line-height: 18px;
+  color: whitesmoke;
+}
+
+.button:hover {
+  background: rgb(27, 63, 120);
+}

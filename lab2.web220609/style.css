@@ -1,0 +1,73 @@
+h1 {
+  color: pink;
+}
+
+/* Sử dụng bộ chọn class */
+/* Mỗi bộ quy tắc nên tách nhỏ ra - utilities */
+/* tên class có ý nghĩa */
+.text-red {
+  color: red;
+}
+.font-size {
+  fontsize: 80px;
+}
+/* Đặt tên class có ý nghĩa */
+/* trên html khai: 
+<h1 class="text-red font-size">ádadscv</h1> */
+
+/* CÁC CÁCH KHAI CLASS */
+/* all 
+Áp dụng 1 số thuộc tính cho toàn bộ trang để set các giá trị mặc định*/
+* {
+}
+/* tag name 
+Áp dụng cthuocj tính chung - set giá trị cho 1 loại thẻ nhất định*/
+body {
+}
+a {
+}
+/* Áp dụng cho nhiều phần tử - nhiều bộ chọn */
+ul,
+ol,
+li {}
+
+.text-brown{
+    color:brown;
+}
+
+.text-maroon{
+    color:maroon;
+}
+
+.text-orange{
+    color: orange;
+}
+
+.text-plum{
+    color: plum;
+}
+
+.text-silver{
+    color: silver;
+}
+
+/* CSS Units */
+/* Nhóm tuyệt đối
+- px
+- in (inch)
+- cm
+- mm
+- pt
+- pc */
+
+/* Nhốm tương đối 
+= %: theo kích thước trang*/
+
+/* 
+Quy tắc ưu tiên css càng cụ thể càng ưu tiên
+1. !important
+2. inline
+3. id
+4. class
+5. tag
+*/

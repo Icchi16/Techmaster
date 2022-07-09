@@ -1,0 +1,443 @@
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Raleway", sans-serif, "NotoColorEmojiLimited";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle; /* xoá inline của ảnh */
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.container {
+  width: 1220px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+
+  margin: 0 -10px;
+}
+
+.row > * {
+  padding: 10px;
+}
+
+.col-1 {
+  width: 8.333333333%;
+}
+
+.col-2 {
+  width: 16.666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333333%;
+}
+
+.col-5 {
+  width: 41.666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333333%;
+}
+
+.col-8 {
+  width: 66.666666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333333%;
+}
+
+.col-11 {
+  width: 91.666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.f-grow-2 {
+  flex-grow: 2;
+}
+
+.f-grow-3 {
+  flex-grow: 3;
+}
+
+.f-shrink-1 {
+  flex-shrink: 1;
+}
+
+.f-basis {
+  flex: 1 1 45%;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.d-collumn {
+  flex-direction: column;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.header-top,
+.header-low {
+  border-bottom: 1px solid rgba(150, 150, 150, 0.336);
+  padding: 1em 0;
+}
+
+.header-low {
+  padding: 0.6em 0;
+}
+
+.menu-symbol {
+  font-variation-settings: "wght" 700;
+  color: black;
+}
+
+.feature-symbol {
+  font-variation-settings: "wght" 500;
+}
+
+.c-blue {
+  color: #578fc4;
+}
+
+.menu-link {
+  display: block;
+  list-style-type: none;
+  padding: 0 1.5em;
+
+  font-weight: 400;
+}
+
+.menu-link a {
+  font-size: 0.8em;
+
+  text-decoration: none;
+  color: black;
+}
+
+.divider {
+  align-self: stretch;
+  border-right: 1px dotted black;
+  margin: 0 10px;
+}
+
+/* While it sounds crazy, 
+padding is calculated by the parent’s width, 
+not height */
+
+.product-big-image {
+  width: 100%;
+  background: #dfdede;
+  line-height: 0;
+}
+
+.product-big-image::after {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+
+.product-small-image {
+  width: 100%;
+  background: #dfdede;
+  line-height: 0;
+}
+
+.product-small-image::after {
+  display: block;
+  content: "";
+  padding-bottom: 100%;
+}
+
+.section-product {
+  margin: 2rem;
+}
+
+.product-meta {
+  padding-left: 1.5em;
+  font-size: 0.8em;
+}
+
+.product-details {
+  margin-top: 3em;
+}
+
+.product-title {
+  letter-spacing: -0.1ch;
+}
+
+.review-container {
+  margin: 0.8em -8px;
+}
+
+.review-container > * {
+  margin: 0 8px;
+}
+
+.review-divider {
+  content: "";
+  height: 1em;
+  border-right: 2px solid #80808050;
+}
+
+.add-review {
+  font-weight: 700;
+
+  text-decoration: underline;
+  text-decoration-color: #808080a4;
+  text-decoration-thickness: 2px;
+}
+
+a .graded {
+  font-variation-settings: "GRAD" 100;
+  color: rgba(146, 128, 25, 0.712);
+}
+
+.price {
+  color: #578fc4;
+  font-size: 1.5rem;
+
+  margin-top: 20px;
+}
+
+.product-info {
+  margin-top: 12px;
+}
+
+.product-info-list {
+  list-style: none;
+}
+
+.product-info-list li {
+  line-height: 1.7em;
+}
+
+.product-info-list li > a {
+  color: #578fc4;
+}
+
+.product-desc > * {
+  line-height: 1.7em;
+  color: #949494;
+}
+
+.product-desc p {
+  margin: 1.5em 0;
+  line-height: 1.5em;
+}
+
+.product-desc-list li {
+  list-style-position: inside;
+}
+
+.product-type-container {
+  margin-top: 2em;
+}
+
+.product-type-heading {
+  font-size: 1.3em;
+  font-weight: 700;
+
+  margin-bottom: 0.8em;
+}
+
+.product-type-box {
+  border: 1px solid #94949469;
+  margin-right: 2em;
+  padding: 1em 0 0.8em 1em;
+}
+
+.product-type-box-2 {
+  border: 1px solid #94949469;
+}
+
+.qty-num {
+  border-right: 1px solid #94949469;
+  padding: 1em 0 0.8em 1em;
+}
+
+.qty-link-up {
+  border-bottom: 1px solid #94949469;
+}
+
+.product-action {
+  margin: 3em 0;
+}
+
+.product-action-clear a {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+
+  text-decoration: underline;
+  text-decoration-color: #808080a4;
+  text-decoration-thickness: 2px;
+}
+
+.product-action-container {
+  margin: 2em 0;
+}
+
+.add-to-cart-button {
+  border: 4px solid #11122b;
+  background: #11122b;
+  color: white;
+
+  width: 50%;
+  padding: 1.5em 0;
+
+  font-weight: 700;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.c-white {
+  color: white;
+}
+
+.add-to-wishlist-button {
+  border: 4px solid rgb(10, 175, 10);
+  padding: 1.5em 0;
+  width: 50%;
+  font-weight: 700;
+}
+
+.add-to-wishlist-text::before {
+  font-family: "Material Symbols Outlined";
+  content: "\e87d";
+  vertical-align: middle;
+  font-size: 13px !important;
+}
+
+.gap {
+  gap: 2em;
+}
+
+.l-height-0 {
+  line-height: 1em;
+}
+
+.product-social {
+  border-top: 1px solid #6565653e;
+  border-bottom: 1px solid #6565653e;
+  padding: 1.4em 0 2em 0;
+}
+
+.product-social-title {
+  font-weight: 700;
+}
+
+.social-list div {
+  margin: 0 0.3em;
+}
+
+.facebook-like-container,
+.facebook-share,
+.twitter-tweet-container,
+.pinterest-pinit {
+  background: #385899;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.facebook-like-container img,
+.twitter-tweet-container img {
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+}
+
+.pinterest-pinit img {
+  display: block;
+  height: 1em;
+  margin-right: 0.2em;
+}
+
+.twitter-tweet-container {
+  background: white;
+  border: 1px solid #80808080;
+}
+
+.pinterest-pinit {
+  background: white;
+  border: 1px solid rgba(128, 128, 128, 0.501);
+  margin-right: 0.2em;
+  padding: 6px;
+}
+
+.footer {
+  border-top: 1px solid #6565653e;
+  margin-top: 4rem;
+  padding: 1.5em 0 1em 0;
+}
+
+.footer-content {
+  text-align: center;
+  color: #9f9f9f;
+}

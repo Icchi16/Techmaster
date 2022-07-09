@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: Helvetica, sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.container {
+  width: 390px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.442);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+}
+
+.row > * {
+  padding: 4px;
+}
+
+.col-1 {
+  width: 8.333333333%;
+}
+
+.col-2 {
+  width: 16.666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333333%;
+}
+
+.col-5 {
+  width: 41.666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.333333333%;
+}
+
+.col-8 {
+  width: 66.666666666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.333333333%;
+}
+
+.col-11 {
+  width: 91.666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.form-header > * {
+  margin: 4px 0;
+}
+
+.form-header {
+  border-bottom: 1px solid #2a2a2a4b;
+}
+
+.form-header > p {
+  font-size: smaller;
+  color: #5a5a5a;
+}
+
+.padding {
+  padding: 10px 15px;
+}
+
+input,
+select,
+.gender-male,
+.gender-female,
+.gender-third {
+  width: 100%;
+  padding: 8px;
+
+  background-color: #8080800d;
+  border: 1px solid #66666649;
+  border-radius: 8px;
+}
+
+.form-heading label,
+.form-heading i {
+  vertical-align: middle;
+  font-size: 0.8em !important;
+  margin-right: 3px;
+  font-variation-settings: "FILL" 1;
+  color: #323232de;
+}
+
+.bday-heading {
+  margin-bottom: -7px;
+}
+
+.gender-heading {
+  margin-bottom: -12px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 119, 255);
+}
+
+.form-desc > * {
+  font-size: 0.65rem;
+  margin-bottom: 10px;
+  line-height: 130%;
+}
+
+.button-container {
+  margin: 15px 0;
+}
+
+.form-summit {
+  display: block;
+  width: auto;
+  padding: 0 50px;
+  margin: 0 auto;
+  background-color: green;
+  border: 0;
+  border-radius: 7px;
+}
+
+input[type="button"] {
+  border: 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: white;
+}
+
+label {
+  font-size: 0.8em;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="section section-form">
+      <div class="container">
+        <div class="form-header padding">
+          <h1 class="form-heading">Đăng ký</h1>
+          <p>Nhanh chóng và dễ dàng</p>
+        </div>
+        <div class="form padding">
+          <div class="row form-input-1">
+            <div class="col-6">
+              <div class="last-name-wrapper">
+                <input
+                  class="input-last-name padding-input"
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Họ"
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="first-name-wrapper">
+                <input
+                  class="input-first-name padding-input"
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder="Tên"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row form-input-2">
+            <div class="col-12">
+              <div class="phone-wrapper">
+                <input
+                  class="input-phone"
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Số di động hoặc email"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row form-input-3">
+            <div class="col-12">
+              <div class="pass-wrapper">
+                <input
+                  class="input-password"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Mật khảu mới"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row form-input-4">
+            <div class="col-12">
+              <div class="form-heading bday-heading">
+                <label>Sinh nhật</label
+                ><i class="material-symbols-outlined">help</i>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="bday-date-input">
+                <select name="bday-date" id="bday-date">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="bday-month-input">
+                <select name="bday-month" id="bday-month">
+                  <option value="1">Tháng 1</option>
+                  <option value="2">Tháng 2</option>
+                  <option value="3">Tháng 3</option>
+                  <option value="4">Tháng 4</option>
+                  <option value="5">Tháng 5</option>
+                  <option value="6">Tháng 6</option>
+                  <option value="7">Tháng 7</option>
+                  <option value="8">Tháng 8</option>
+                  <option value="9">Tháng 9</option>
+                  <option value="10">Tháng 10</option>
+                  <option value="11">Tháng 11</option>
+                  <option value="12">Tháng 12</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="bday-year-input">
+                <select name="bday-year" id="bday-year">
+                  <option value="1">1994</option>
+                  <option value="2">1995</option>
+                  <option value="3">1996</option>
+                  <option value="4">1997</option>
+                  <option value="5">1998</option>
+                  <option value="6">1999</option>
+                  <option value="7">2000</option>
+                  <option value="8">2001</option>
+                  <option value="9">2002</option>
+                  <option value="10">2003</option>
+                  <option value="11">2004</option>
+                  <option value="12">2005</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-input-5">
+            <div class="row gender a-center">
+              <div class="col-12">
+                <div class="form-heading gender-heading">
+                  <label>
+                    Giới tính <i class="material-symbols-outlined">help</i>
+                  </label>
+                </div>
+              </div>
+              <div class="col-7">
+                <div class="male-female">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="gender-male d-flex a-center j-between">
+                        <label for="male">Nam</label>
+                        <input type="radio" name="gender" id="male" />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="gender-female d-flex a-center j-between">
+                        <label for="female">Nữ </label>
+                        <input type="radio" name="gender" id="female" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="gender-third d-flex a-center no-wrap j-between">
+                  <label for="third">Tùy chỉnh </label>
+                  <input type="radio" name="gender" id="third" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-desc">
+            <p>
+              Người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ
+              của bạn lên Facebook. <a href="">Tìm hiểu thêm</a>
+            </p>
+            <p>
+              Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+              <a href="">Điều khoản, Chính sách dữ liệu</a> và
+              <a href="">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận
+              được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+            </p>
+          </div>
+          <div class="button-container">
+            <form class="form-summit">
+              <input type="button" value="Đăng ký" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

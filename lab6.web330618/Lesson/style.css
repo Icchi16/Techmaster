@@ -1,0 +1,43 @@
+table {
+  border-collapse: collapse;
+}
+thead tr,
+thead th,
+tbody tr,
+tbody td {
+  border: 1px dashed gray;
+}
+
+thead th,
+tbody td {
+  padding: 10px;
+}
+
+tbody td:nth-child(3),
+tbody td:nth-child(4),
+tbody td:nth-child(5),
+tfoot td:last-child,
+tfoot td:first-child {
+  text-align: right;
+}
+
+tbody tr:nth-child(even) {
+  background-color: hotpink;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field > label {
+  display: inline-block;
+  width: 200px;
+  margin-right: 12px;
+  text-align: right;
+}
+
+.d-flex{display: flex;}
+
+.a-justify{
+    align-items: center;
+}

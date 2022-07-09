@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square-small {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.square-medium {
+  width: 250px;
+  height: 250px;
+}
+
+.square-large {
+  width: 500px;
+  height: 500px;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-green {
+  background: green;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-yelllow {
+  border-color: yellow;
+}
+
+.border-brown {
+  border-color: brown;
+}
+
+.border-cyan {
+  border-color: cyan;
+}
+
+.border-medium {
+  border-width: 5px;
+}
+
+.border-thin {
+  border-width: 1px;
+}
+
+.border-thick {
+  border-width: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.product-thumbnail {
+  width: 225px;
+  height: 225px;
+}
+
+.product {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- video cần 1 đường dẫn trực tiếp, không thể dung ủl bình thường -->
+    <video controls width="100%" src="Video/Video.mp4"></video>
+    <!-- cần phải thêm thuộc tính controls để có thể điều khiển được video 
+*** Không nên sử dụng video quá nặng
+
+    thuộc tính thẻ video:
+    + controls: Cho phép điều khiển video của trình duyệt web
+    + poster: Hình ảnh bìa Video 
+    + autoplay: tự động chạy khi mở web
+    + loop: tự động lặp lại 
+-->
+
+    <!-- iframe 
+    nền tảng chia sẻ nội dung
+    tìm nút "CHIA SẺ" để lấy mã nhúng iframe
+
+-->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/zENKRiJrq6Y"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.858761266739!2d105.7925007148413!3d20.99829799419359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad5e6a49f693%3A0x13aeab8c73d00e0c!2sTechmaster!5e0!3m2!1sen!2s!4v1655554084707!5m2!1sen!2s"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <blockquote
+      class="tiktok-embed"
+      cite="https://www.tiktok.com/@1984tattoostudio/video/7088260620868472090"
+      data-video-id="7088260620868472090"
+      style="max-width: 605px; min-width: 325px"
+    >
+      <section>
+        <a
+          target="_blank"
+          title="@1984tattoostudio"
+          href="https://www.tiktok.com/@1984tattoostudio"
+          >@1984tattoostudio</a
+        >
+        <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp"
+          >#fyp</a
+        >
+        <a
+          target="_blank"
+          title="♬ nhạc nền  - 1984tattoostudio"
+          href="https://www.tiktok.com/music/nhạc-nền-1984tattoostudio-7088260610303052571"
+          >♬ nhạc nền - 1984tattoostudio</a
+        >
+      </section>
+    </blockquote>
+
+    <table>
+      <caption>
+        Hoá đơn mua hàng
+      </caption>
+      <!-- Sẽ không có hàng cột trong caption -->
+
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên Sản Phẩm</th>
+          <th>Số lượng</th>
+          <th>Đơn giá</th>
+          <th>Thành Tiền</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Iphone 15 Pro Mega Super Max</td>
+          <td>1,000</td>
+          <td>99</td>
+          <td>99,000</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Mac Book Pro M100^<span>0</span></td>
+          <td>2</td>
+          <td>100,000,000</td>
+          <td>200,000,000</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Rau Muống</td>
+          <td>1</td>
+          <td>6,000</td>
+          <td>6,000</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="4">Tổng Tiền</td>
+          <td>200,105,000</td>
+        </tr>
+        <tr>
+          <td colspan="4">Chiết Khấu</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td colspan="4">Thành Tiền</td>
+          <td>200,105,000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Thẻ Table
+    t-head
+    t-body
+t-foot  
+
+Nên làm rõ có bao nhiêu cột
+
+ -->
+
+    <!-- Thẻ form
+4 thrẻ control đơn giản: 4 loại nhập dữ liệu đơn giản
+Select: lựa chọn các option có sẵn
+textarea: cho nhập dex liệu dài trên một dong
+button: cho phép tạo nút
+
+
+Input: có 2 thuọc tính quan trọng
+name: định danh dữ liệu
+type: kiểu dữ liệu mà người dung nhập vào
+-->
+
+    <form action="">
+      <div class="form-field d-flex a-justify">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="usernamer" />
+      </div>
+
+      <div class="form-field d-flex a-justify">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" id="" />
+      </div>
+
+      <!-- <input
+        type="image"
+        src="https://media.techmaster.vn/api/static/bub3enc51co7s932dsk0/lysbYGUh"
+        alt=""
+      /> -->
+      <!-- Tra về vị trí tương tác rảnh -->
+      <div class="form-field d-flex a-justify">
+        <label for="volume">Volume</label>
+        <input type="range" name="volume" id="volume" />
+      </div>
+      <div class="form-field d-flex a-justify">
+        <label for="date">Birthday</label>
+        <input type="date" name="birth-day" id="date" />
+      </div>
+      <div class="form-field d-flex a-justify">
+        <label for="color">Color</label>
+        <input type="color" name="fav-color" id="color" />
+      </div>
+      <!-- Cos 2 input đặc biệt là "radio" và "checkbox" 
+Radio sử dụng đưa ra lựa chọn bắt buộc và chỉ 1 cái
+Checkbox có thể lựa chọn hoặc không
+-->
+      <div class="form-field d-flex a-justify">
+        <label>Giowis tinhs</label>
+        <div class="option">
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" />
+        </div>
+        <div class="option">
+          <label for="female">Female</label
+          ><input type="radio" name="gender" id="female" />
+        </div>
+        <div class="option">
+          <label for="third">Gay</label>
+          <input type="radio" name="gender" id="third" />
+        </div>
+      </div>
+
+      <input type="checkbox" name="fav" id="" />
+      <input type="checkbox" name="fav" id="" />
+      <input type="checkbox" name="fav" id="" />
+    </form>
+
+    <!-- Thẻ Select
+    Sư dụng thay thế cho radio và checkbox
+    -->
+    <div class="form-field d-flex a-justify">
+      <label for="city">Thành Phố</label>
+      <select name="city" id="city">
+        <option value="29">Hà Nội</option>
+        <option value="18">Nam Định</option>
+        <option value="15">Hải Phòng</option>
+        <option value="98">Bắc Giang</option>
+        <option value="24">Lào Cai</option>
+      </select>
+    </div>
+    <div class="form-field d-flex a-justify">
+      <label for="comment">Comment</label>
+      <textarea name="" id="comment" cols="30" rows="10"></textarea>
+    </div>
+
+    <button>Click Me</button>
+
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <!-- 2 dạng tẽt mô tả 
+    placeholder: hiển thị text mô tả phần tử form (quá cũ)
+label(hay dùng): có text dằng trước, có thể focus vào imput khi clivk vào
+    -->
+  </body>
+</html>

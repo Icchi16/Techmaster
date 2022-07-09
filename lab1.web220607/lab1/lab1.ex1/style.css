@@ -1,0 +1,71 @@
+.text-brown{
+    color:brown;
+}
+
+.text-maroon{
+    color:maroon;
+}
+
+.text-orange{
+    color: orange;
+}
+
+.text-plum{
+    color: plum;
+}
+
+.text-silver{
+    color: silver;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.decoration-overline{
+    text-decoration-line: overline;
+}
+
+.decoration-linethrough{
+    text-decoration-line: line-through;
+}
+
+.decoration-none{
+    text-decoration: none;
+}
+
+.decoration-red{
+    text-decoration-color: red;
+}
+
+.decoration-overunderline{
+    text-decoration-line: overline underline;
+}
+
+.text.uppercase{
+    text-transform: uppercase;
+}
+
+.text-capitalize{
+    text-transform: capitalize;
+}
+
+.text-lowercase{
+    text-transform: lowercase;
+}
+
+.p-indent{
+    text-indent: 5px;
+}
