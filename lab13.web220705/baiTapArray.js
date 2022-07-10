@@ -152,7 +152,7 @@ function interesection(arr1, arr2) {
   return newArr;
 }
 
-console.log(interesection(testArr, testArr2));
+// console.log(interesection(testArr, testArr2));
 
 // (9)
 function differnce(arr1, arr2) {
@@ -191,7 +191,8 @@ function differnce(arr1, arr2) {
 
   return arr1Diff.concat(arr2Diff);
 }
-console.log(differnce(testArr, testArr2));
+
+// console.log(differnce(testArr, testArr2));
 
 // (10)
 function removeDuplicate(arr) {
@@ -210,11 +211,60 @@ function removeDuplicate(arr) {
   return newArr;
 }
 
-console.log(removeDuplicate([1, 2, 3, 4, 5, 4, 3, 5, 6]));
+// console.log(removeDuplicate([1, 2, 3, 4, 5, 4, 3, 5, 6]));
+
+// (11)
+function filterRange(arr, a, b) {
+  return arr.filter(function (value) {
+    return value >= a && value <= b;
+  });
+}
+
+// console.log(filterRange([5, 3, 8, 1], 1, 4));
+
+// (12)
+const users1 = [
+  { name: "John", surname: "Smith", id: 1 },
+  { name: "Pete", surname: "Hunt", id: 2 },
+  { name: "Mary", surname: "Key", id: 3 },
+];
+
+function getNames(users) {
+  return users.map(function (name) {
+    return name.name;
+  });
+}
+
+// console.log(getNames(users));
+
+// (13)
+
+function mapFullName(users) {
+  let name = {};
+  return users.map(function ({ name, surname, id }) {
+    return { fullname: name + " " + surname, id: id };
+  });
+}
+
+// console.log(mapFullName(users));
+
+// (14)
+const users2 = [
+  { name: "John", age: 25 },
+  { name: "Pete", age: 30 },
+  { name: "Mary", age: 28 },
+];
+
+function greaterThan(users, age) {
+  return users.filter(function (name) {
+    if (name.age > age) return name;
+  });
+}
+
+// console.log(greaterThan(users2, 29));
 
 // (15)
-let user=[{}]
-
+let user = [{}];
 
 function aveAge(users) {
   let result = 0;
@@ -223,3 +273,14 @@ function aveAge(users) {
   }, 0);
   return total / users.length;
 }
+
+// (16)
+
+function sortUsersByAge(users) {
+  users = users.sort(function (name1, name2) {
+    return name2.age - name1.age;
+  });
+  return users;
+}
+
+console.log(sortUsersByAge(users2));
