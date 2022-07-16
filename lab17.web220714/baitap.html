@@ -73,8 +73,17 @@
       let string = `Bây giờ là ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()} ${date.getDate()}/${date.getMinutes()}/${date.getFullYear()}`;
       div.textContent = string;
 
-      let p = document.querySelector("p");
-      console.log(p);
+      let p = document.querySelector(".bio");
+      let onlyBa = p.textContent.match(/Ba/g).length;
+      // const count = onlyBa.length;
+      let num = document.querySelector(".num-of-words");
+      num.textContent = `Ở đoạn trên có ${onlyBa} từ 'Ba'`;
+
+      let table = document.querySelector("table");
+      let newRow = table.insertRow(0);
+      let newCell = newRow.insertCell(0);
+      let newText = document.createTextNode("Thầy Ba siêu đẹp trai");
+      newCell.appendChild(newText);
     </script>
   </body>
 </html>
