@@ -47,7 +47,7 @@ function getLastDayOfMonth(year, month) {
 
 // (6)
 
-function ()
+// function ()
 
 
 

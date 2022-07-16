@@ -1,0 +1,47 @@
+<!-- 
+    Obj có thuộc tính và phương thức
+    tương tự DOM có các thuộc tính và phương thức
+ -->
+
+<!-- 
+    trong trình duyệt còn có các obj khác ngoài
+     môi tường ngôn ngữ lập trình
+  -->
+
+<!-- THẻ DOM
+document.title trỏ đến thẻ title
+doucment.documentElement trỏ đến thẻ <root>
+    document.body trỏ đến thẻ body
+    documeny.head trỏ đến thẻ head 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" alt="" />
+    <div></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum natus
+      perspiciatis sequi minus obcaecati exercitationem necessitatibus nam
+      facilis minima id cum placeat culpa, tempora unde quod eum. Inventore, a
+      repellendus?
+    </p>
+
+    <script>
+      //   const imgSource = "https://duhochfc.vn/uploads/CHO-MIN-YEONG.jpg";
+      //   const image = document.querySelector("img");
+      //   image.src = imgSource;
+      //   console.log(image.type);
+
+      //   image.getAttribute("type");
+      const div = document.querySelector("div");
+      div.innerHTML=('<img src="https://duhochfc.vn/uploads/CHO-MIN-YEONG.jpg"</img><p>Chào em chị đứng đây từ chiều</p>')
+    </script>
+  </body>
+</html>
