@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-
+scale=1.0"
+    />
+    <title>Random background color</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="property"></div>
+      <div class="action">
+        <div class="">Click button below to change the background color</div>
+        <button class="btn-change">Change</button>
+      </div>
+    </div>
+
+    <script>
+      let direction = [
+        "to left",
+        "to right",
+        "to top",
+        "to bottom",
+        "to top left",
+        "to top right",
+        "to bottom left",
+        "to bottoom right",
+      ];
+      function random(arr) {
+        let randomNum = Math.random() * arr.length;
+        return arr[Math.floor(randomNum)];
+      }
+      //   function randomColor() {
+      //     let colorLetter = "12345678abcdef";
+      //     let colorCode = [];
+
+      //     for (let i = 0; i < 6; i++) {
+      //       colorCode.push(random(colorLetter));
+      //     }
+      //     console.log(colorCode);
+      //     return `#${colorCode}`;
+      //   }
+
+      let randomColor = function () {
+        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      };
+
+      let btn = document.querySelector(".btn-change");
+      btn.addEventListener("click", function () {
+        const dir = random(direction);
+        const color1 = randomColor();
+        const color2 = randomColor();
+
+        let value = `linear-gradient(${dir}, ${color1}, ${color2});`;
+        document.body.style.backgroundImage = value;
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>
