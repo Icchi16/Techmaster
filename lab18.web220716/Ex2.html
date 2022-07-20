@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-
+scale=1.0"
+    />
+    <title>Fruit List</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- <div class="todo-list">
+        <div class="todo completed">Learing HTML</div>
+      </div>
+      <div class="todo-list"><div class="todo">Learing CSS</div></div>
+      <div class="todo-list"><div class="todo">Learing JavaScript</div></div> -->
+    </div>
+
+    <script>
+      const todos = [
+        {
+          id: 1,
+          completed: true,
+          content: "Learning HTML",
+        },
+        {
+          id: 2,
+          completed: true,
+          content: "Learning CSS",
+        },
+        {
+          id: 3,
+          completed: false,
+          content: "Learning JavaScript",
+        },
+      ];
+
+      function createTodoItems(todo) {
+        // debugger;
+        let li = document.createElement("li");
+        li.textContent = todo.content;
+
+        if (!todo.completed) li.classList.add("completed");
+
+        return li;
+      }
+
+      function createTodoList(todos) {
+        // debugger;
+        let ul = document.createElement("ul");
+        //           todos.forEach(fucntion(todo){
+        //   ul.append(createTodoItems())
+        //           })s
+        todos.forEach(function (todo) {
+          ul.append(createTodoItems(todo));
+        });
+        return ul;
+      }
+
+      let app = document.getElementById("app");
+      app.append(createTodoList(todos));
+    </script>
+  </body>
+</html>

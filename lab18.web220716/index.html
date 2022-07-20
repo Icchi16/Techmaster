@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <!-- on`j do` -->
+
+      <button onclick="handleClick()">Click em di</button>
+
+      <button class="btn">Handle em di</button>
+
+      <button class="abc">Cham vao em di</button>
+
+      <button class="xyz">Hon em di</button>
+    </div>
+
+    <script>
+      function handleClick() {
+        console.log("Clicked");
+      }
+
+      const btn = document.querySelector(".btn");
+      btn.onclick = function () {
+        handleClick();
+      };
+
+      //   addEventLiistener()/ removeEventListener()
+      // teen rõ ràn hơn
+      //  hco dùng nhiều hàm cùng 1 lúc
+      // xoá hàm bất kỳ không ảnh hưởng đến các thằng khác
+      const otherBtn = document.querySelector(".abc");
+      const otherBtn2 = document.querySelector(".xyz");
+
+      // evenType
+      otherBtn.addEventListener("click", handleClick);
+      otherBtn2.addEventListener("click", function () {
+        otherBtn.removeEventListener("click", handleClick);
+      });
+    </script>
+  </body>
+</html>
