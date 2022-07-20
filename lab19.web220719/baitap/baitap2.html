@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" class="form" name="tip">
+      <h1 class="form-heading">Tip Calculator</h1>
+      <div class="bill-container">
+        <div class="bill-header">Bill amount</div>
+        <div class="bill-ico"></div>
+        <input type="number" name="bill" id="bill" />
+      </div>
+      <div class="guest-container">
+        <div class="guest-header">Number of guests</div>
+        <div class="guest-ico"></div>
+        <input type="number" name="guest" id="guest" />
+      </div>
+      <div class="service-container">
+        <div class="service-header">Service Quality</div>
+        <select name="service" id="service">
+          <option value="0.3">30% - Outstanding</option>
+          <option value="0.2">20% - Good</option>
+          <option value="0.15">15% - It's OK</option>
+          <option value="0.1">10% - Bad</option>
+          <option value="0.05">5% - Terible</option>
+        </select>
+      </div>
+      <div class="total"></div>
+      <button type="submit" value="submit" class="cal-btn">Calculate</button>
+
+      <script>
+        document.forms.tip.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // const amount = this.elements.{name}.value
+
+          let total = document.querySelector(".total");
+          const bill = document.getElementById("bill").value;
+          const guest = document.getElementById("guest").value;
+          const service = document.getElementById("service").value;
+          let sum = ((bill * service) / guest).toFixed(2);
+
+          //   const calBtn = document.querySelector(".cal-btn");
+          //   calBtn.addEventListener("click", function () {
+          total.innerHTML = `Tip <b>$${sum}</b> each person`;
+        });
+        // });
+      </script>
+    </form>
+  </body>
+</html>
