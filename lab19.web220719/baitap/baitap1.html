@@ -30,34 +30,40 @@ scale=1.0"
         "to bottom left",
         "to bottoom right",
       ];
-      function random(arr) {
-        let randomNum = Math.random() * arr.length;
-        return arr[Math.floor(randomNum)];
+
+      function randomDirection() {
+        return direction[Math.floor(Math.random() * direction.length)];
       }
-      //   function randomColor() {
-      //     let colorLetter = "12345678abcdef";
-      //     let colorCode = [];
 
-      //     for (let i = 0; i < 6; i++) {
-      //       colorCode.push(random(colorLetter));
-      //     }
-      //     console.log(colorCode);
-      //     return `#${colorCode}`;
-      //   }
+      function randomColor() {
+        let colorLetter = "12345678abcdef";
+        let colorCode = [];
 
-      let randomColor = function () {
-        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-      };
+        for (let i = 0; i < 6; i++) {
+          colorCode.push(
+            colorLetter[Math.floor(Math.random() * colorLetter.length)]
+          );
+        }
+        colorCode = colorCode.join("");
+        return `#${colorCode}`;
+      }
+
+      // let randomColor = function () {
+      //   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      // };
 
       let btn = document.querySelector(".btn-change");
       btn.addEventListener("click", function () {
-        const dir = random(direction);
+        const dir = randomDirection();
         const color1 = randomColor();
         const color2 = randomColor();
-
-        let value = `linear-gradient(${dir}, ${color1}, ${color2});`;
-        document.body.style.backgroundImage = value;
-        console.log(value);
+        const linearGradient = `linear-gradient(${dir}, ${color1}, ${color2})`;
+        // console.log(linearGradient);
+        document.body.style.backgroundImage = linearGradient;
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        // document.body.style.backgroundImage = `linear-gradient(${dir}, ${color1}, ${color2})`;
+        console.log(document.body.style.backgroundImage);
       });
     </script>
   </body>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .table {
+        border-collapse: collapse;
+        /* width: 600px; */
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+
+      .thead {
+        font-weight: 700;
+      }
+
+      tfoot,
+      tfoot > tr > td {
+        text-align: right;
+        font-style: italic;
+        border: 0;
+      }
+
+      tfoot > tr:last-child {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+      <!-- <thead class="thead">
+        <colgroup>
+          <col class="col1" />
+          <col class="col2" />
+          <col class="col3" />
+          <col class="col4" />
+        </colgroup>
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Mức đóng góp</th>
+          <th>Nhật xét</th>
+        </tr>
+      </thead>
+      <tbody class="tbody"></tbody>
+      <tfoot class="tfoot"></tfoot> -->
+    </table>
+
+    <script>
+      let data = [
+        {
+          stt: 1,
+          name: "Giang Hồng Sơn",
+          donate: 1000000,
+          comt: "Suger Dady :)",
+        },
+        {
+          stt: 2,
+          name: "Nguyễn Thế Anh",
+          donate: 200000,
+          comt: "Suger Brother :)",
+        },
+        {
+          stt: 3,
+          name: "Bùi Lan Nhi",
+          donate: 100000,
+          comt: "Định mời Nhi ăn tối hoá ra lại thành bữa tối của Nhi :(",
+        },
+        {
+          stt: 4,
+          name: "Nguyễn Hữu Hà",
+          donate: 150000,
+          comt: "Tuối trẻ tài cao :D",
+        },
+        {
+          stt: 5,
+          name: "Phạm Hồng Anh",
+          donate: 100000,
+          comt: "Lúc đầu gáy to về sau hơi rén",
+        },
+        {
+          stt: 6,
+          name: "Nguyễn Văn Hùng",
+          donate: 100000,
+          comt: "Bị buồn :]]",
+        },
+        {
+          stt: 7,
+          name: "Nguyễn Văn Tùng",
+          donate: 200000,
+          comt: "Kèo nào cung cân 👍",
+        },
+        {
+          stt: 8,
+          name: "Bùi Minh Đức",
+          donate: 100000,
+          comt: "Hơi rén, lần sau cần mạnh dạn hơn :D",
+        },
+        {
+          stt: 9,
+          name: "Dương Đức Thịnh",
+          donate: 100000,
+          comt: "Mồm to húp hết nửa bill @@",
+        },
+        {
+          stt: 10,
+          name: "Thầy giáo Barr",
+          donate: 100000,
+          comt: "Cám ơn Nhi đã mời mình :)",
+        },
+      ];
+
+      const table = document.querySelector(".table");
+
+      table.createCaption().innerHTML = "<h1>HOÁ ĐƠN ĂN NHẬU</h1>";
+      const theadRow = table.createTHead().insertRow();
+      theadRow.classList.add("thead");
+      theadRow.insertCell().textContent = "STT";
+      theadRow.insertCell().textContent = "Tên";
+      theadRow.insertCell().textContent = "Mức đóng góp";
+      theadRow.insertCell().textContent = "Nhận xét";
+
+      const tBody = table.createTBody();
+      let sum = 0;
+      for (let i = 0; i < data.length; i++) {
+        let row = tBody.insertRow();
+        row.insertCell().textContent = i + 1;
+        row.insertCell().textContent = data[i].name;
+        row.insertCell().textContent = data[i].donate;
+        row.insertCell().textContent = data[i].comt;
+        sum += data[i].donate;
+      }
+
+      const tFoot = table.createTFoot();
+
+      for (let i = 0; i < 4; i++) {
+        let row = tFoot.insertRow();
+        switch (i) {
+          case 0:
+            cell = row.insertCell();
+            cell.colSpan = 4;
+            cell.textContent = "Tổng bill ca 1: 2022000";
+            break;
+          case 1:
+            cell = row.insertCell();
+            cell.colSpan = 4;
+            cell.textContent = "Tổng bill ca 2: 105000";
+            break;
+          case 2:
+            cell = row.insertCell();
+            cell.colSpan = 4;
+            cell.textContent = "Tổng thiệt hại: 2128000";
+            break;
+          case 3:
+            cell = row.insertCell();
+            cell.colSpan = 4;
+            cell.textContent = `Tổng đóng góp: ${sum}`;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
