@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      .d-flex {
+        display: flex;
+      }
+    </style>
   </head>
   <body>
     <form action="submit" name="todo">
@@ -15,7 +21,7 @@
         class="todo"
         placeholder="What do you want to do?"
       />
-      <button type="submit" form="todo">Create</button>
+      <button type="submit" form="todo" class="submit-btn">Create</button>
 
       <div class="selector">
         <input type="radio" name="selector" id="all" />All
@@ -37,14 +43,75 @@
 
     <script>
       // [{title, completed, id}]
-      const todo = [{ id: 1, tilte: "Xin chào", completed: false }];
+      function createCheckBox(e, value) {
+        const todoCompleted = document.createElement("input");
+        todoCompleted.value = value;
+        todoCompleted.type = "checkbox";
+        todoCompleted.id = "completed";
+        todoCompleted.name = "completed";
 
-function items = todos.map(function(todo){
-return `<div class="todo-items"></div>`
-})
+        e.appendChild(todoCompleted);
+      }
 
-      document.forms.toDoApp.addEventListenser("submit", function (e) {
+      function createTitle(e, value) {
+        const todoTitle = document.createElement("p");
+        todoTitle.textContent = value;
+
+        e.appendChild(todoTitle);
+      }
+
+      function createDelete(e) {
+        const todoDelete = document.createElement("button");
+        todoDelete.type = "button";
+        todoDelete.name = "delete";
+        todoDelete.textContent = "Delete";
+
+        e.appendChild(todoDelete);
+      }
+
+      const todo = [
+        { id: 0, title: "Hihihi", completed: false },
+        { id: 1, title: "Hihihi", completed: false },
+      ];
+
+      function renderTodoList() {
+        for (let i = 0; i < todo.length; i++) {
+          console.log(todo);
+
+          let id = todo[i].id;
+          let title = todo[i].title;
+          let completed = todo[i].completed;
+
+          const todoItem = document.createElement("div");
+          todoItem.classList.add(`id-${id}`, `d-flex`);
+
+          createCheckBox(todoItem, completed);
+          createTitle(todoItem, title);
+          createDelete(todoItem);
+
+          // todoItem.appendChild(input)
+
+          document.querySelector(".todo-list").append(todoItem);
+        }
+      }
+
+      function addTodo() {
+        const title = document.querySelector(".todo").value;
+
+        const id = Math.floor(
+          Math.random() * (100000 - todo.length) + todo.length
+        );
+        const completed = false;
+
+        renderTodoList();
+      }
+
+      const createBtn = document.querySelector(".submit-btn");
+      createBtn.addEventListener("click", function (e) {
         e.preventDefault();
+
+        console.log("click");
+        addTodo();
       });
     </script>
   </body>
