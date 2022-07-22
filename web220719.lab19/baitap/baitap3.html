@@ -7,15 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="submit" name="toDoApp">
+    <form action="submit" name="todo">
       <h1>Simple ToDoApp</h1>
       <input
         type="text"
-        name="toDo"
-        id="toDo"
+        name="todo"
+        class="todo"
         placeholder="What do you want to do?"
       />
-      <button type="submit" form="toDoApp">Creat</button>
+      <button type="submit" form="todo">Create</button>
 
       <div class="selector">
         <input type="radio" name="selector" id="all" />All
@@ -27,16 +27,25 @@
         <input type="radio" name="selector"" id="complete" />Complete
       </div>
 
-      <div class="to-do-list"></div>
+      <div class="todo-list"></div>
 
-      <div class="status"></div>
+      <div class="todo-summary">
+        <div class="pending"></div>
+        <button type="button">clear</button>
+      </div>
     </form>
 
     <script>
+      // [{title, completed, id}]
+      const todo = [{ id: 1, tilte: "Xin chào", completed: false }];
 
+function items = todos.map(function(todo){
+return `<div class="todo-items"></div>`
+})
 
-
-
+      document.forms.toDoApp.addEventListenser("submit", function (e) {
+        e.preventDefault();
+      });
     </script>
   </body>
 </html>
