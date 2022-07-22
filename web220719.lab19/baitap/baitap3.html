@@ -10,10 +10,14 @@
       .d-flex {
         display: flex;
       }
+
+      .completed {
+        text-decoration: line-through;
+      }
     </style>
   </head>
   <body>
-    <form action="submit" name="todo">
+    <form name="todo">
       <h1>Simple ToDoApp</h1>
       <input
         type="text"
@@ -21,16 +25,12 @@
         class="todo"
         placeholder="What do you want to do?"
       />
-      <button type="submit" form="todo" class="submit-btn">Create</button>
+      <button type="submit" class="submit-btn">Create</button>
 
-      <div class="selector">
-        <input type="radio" name="selector" id="all" />All
-      </div>
-      <div class="sellector">
-        <input type="radio" name="selector"" id="active" />Active
-      </div>
-      <div class="sellector">
-        <input type="radio" name="selector"" id="complete" />Complete
+      <div class="selector d-flex">
+        <input type="radio" name="selector" id="all" />All <input type="radio"
+        name="selector"" id="active" />Active <input type="radio"
+        name="selector"" id="complete" />Complete
       </div>
 
       <div class="todo-list"></div>
@@ -54,8 +54,11 @@
       }
 
       function createTitle(e, value) {
-        const todoTitle = document.createElement("p");
-        todoTitle.textContent = value;
+        const todoTitle = document.createElement("input");
+        todoTitle.value = value;
+        todoTitle.type = "text";
+        todoTitle.name = "title";
+        todoTitle.classList.add("onchange");
 
         e.appendChild(todoTitle);
       }
@@ -75,9 +78,9 @@
       ];
 
       function renderTodoList() {
-        for (let i = 0; i < todo.length; i++) {
-          console.log(todo);
+        document.querySelector(".todo-list").innerHTML = "";
 
+        for (let i = 0; i < todo.length; i++) {
           let id = todo[i].id;
           let title = todo[i].title;
           let completed = todo[i].completed;
@@ -96,23 +99,38 @@
       }
 
       function addTodo() {
-        const title = document.querySelector(".todo").value;
+        let title = document.querySelector(".todo").value;
 
         const id = Math.floor(
           Math.random() * (100000 - todo.length) + todo.length
         );
         const completed = false;
 
+        let newTodo = {};
+        newTodo.id = id;
+        newTodo.title = title;
+        newTodo.completed = completed;
+        todo.push(newTodo);
+
         renderTodoList();
+        document.querySelector(".todo").value = "";
       }
 
-      const createBtn = document.querySelector(".submit-btn");
-      createBtn.addEventListener("click", function (e) {
-        e.preventDefault();
+      // addTodo();
 
-        console.log("click");
+      document.forms.todo.addEventListener("submit", function (e) {
+        e.preventDefault();
         addTodo();
       });
+
+      // const todoOnchange = document.querySelectorAll(".onchange");
+      // todoOnchange.forEach(function (index) {
+      //   index.addEventListener("change", function (e) {
+      //     console.log("changed");
+      //   });
+      // });
+      console.log(document.querySelector("div"));
+      function checkComplete() {}
     </script>
   </body>
 </html>
