@@ -231,15 +231,17 @@
     </form>
 
     <script>
-     let todo = JSON.parse(localStorage.getItem("local_todo"));
-      // let todo = [
-      //   {
-      //     id: 0,
-      //     title: "Simple Todo App = AddElement (Edit đc nữa kaka)",
-      //     completed: false,
-      //   },
-      //   { id: 1, title: "Rất khoai nhưng vẫn hoàn thành", completed: true },
-      // ];
+      let todo = JSON.parse(localStorage.getItem("local_todo"));
+
+      if (!todo)
+        todo = [
+          {
+            id: 0,
+            title: "Simple Todo App = AddElement (Edit đc nữa kaka)",
+            completed: false,
+          },
+          { id: 1, title: "Rất khoai nhưng vẫn hoàn thành", completed: true },
+        ];
       // [{title, completed, id}]
       function createCheckBox(e, value) {
         // debugger;
