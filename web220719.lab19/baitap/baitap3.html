@@ -7,112 +7,363 @@
     <title>Document</title>
 
     <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: linear-gradient(
+          53deg,
+          rgba(212, 132, 215, 0.3),
+          rgba(247, 89, 47, 0.4)
+        );
+      }
+
+      form {
+        background-color: whitesmoke;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding: 50px 30px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.432);
+      }
+
+      h1 {
+        font-size: 50px;
+        font-weight: 400;
+        margin-bottom: 50px;
+      }
+
+      .input-wrapper {
+        width: 100%;
+      }
+
+      .input-wrapper > * {
+        border: 0;
+      }
+
+      .input-wrapper > input {
+        width: 80%;
+        border: 2px solid #e0e7ff;
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .input-wrapper > input:focus {
+        border: 2px solid #6366f1;
+      }
+
+      input:focus,
+      button:focus {
+        outline: none;
+      }
+
+      .input-wrapper > button {
+        width: 20%;
+        background-color: #6366f1;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .input-wrapper > button:hover {
+        width: 20%;
+        background-color: #d3d4ff;
+        padding: 10px 20px;
+        color: black;
+        font-weight: 500;
+      }
+
       .d-flex {
-        display: flex;
+        display: inline-flex;
+        gap: 5px;
+      }
+
+      .selector {
+        width: 100%;
+        justify-content: flex-end;
+        margin: 10px 0;
+      }
+
+      .selector > label {
+        margin-left: 20px;
+      }
+
+      .selector > label > input {
+        margin-right: 5px;
+      }
+
+      .todo-item {
+        width: 100%;
+
+        gap: 0;
+        height: 50px;
+        position: relative;
+        align-items: center;
+      }
+
+      .todo-item > * {
+        margin: 0 10px;
+        border: 0;
+        background: none;
+      }
+
+      .todo-item:hover > :nth-child(4) {
+        display: block;
+      }
+
+      .todo-item:nth-child(odd) {
+        background-color: white;
+      }
+      .todo-item:nth-child(even) {
+        background-color: rgb(235, 235, 235);
+      }
+
+      .todo-item > :nth-child(1) {
+        width: 4%;
+        margin-right: 20px;
+      }
+      .todo-item > :nth-child(2) {
+        width: 96%;
+      }
+
+      .todo-item > :nth-child(3) {
+        position: absolute;
+        left: -10px;
+        background-color: blue;
+        height: 100%;
+        padding: 0 10px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .todo-item > :nth-child(4) {
+        position: absolute;
+        right: -10px;
+        background-color: red;
+        height: 100%;
+        padding: 0 10px;
+        color: white;
+        cursor: pointer;
+        display: none;
+      }
+
+      .todo-summary {
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+      }
+
+      .todo-summary > div {
+        font-weight: 500;
+      }
+
+      .todo-summary > button {
+        border: 0;
+        width: 20%;
+        height: 100%;
+        background-color: rgb(202, 7, 7);
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        margin-left: auto;
       }
 
       .completed {
         text-decoration: line-through;
+      }
+
+      .no-display {
+        display: none;
       }
     </style>
   </head>
   <body>
     <form name="todo">
       <h1>Simple ToDoApp</h1>
-      <input
-        type="text"
-        name="todo"
-        class="todo"
-        placeholder="What do you want to do?"
-      />
-      <button type="submit" class="submit-btn">Create</button>
+      <div class="input-wrapper d-flex">
+        <input
+          type="text"
+          name="todo"
+          class="todo"
+          placeholder="What do you want to do?"
+        />
+        <button type="submit" class="submit-btn">Create</button>
+      </div>
 
       <div class="selector d-flex">
-        <input type="radio" name="selector" id="all" />All <input type="radio"
-        name="selector"" id="active" />Active <input type="radio"
-        name="selector"" id="complete" />Complete
+        <label for="all"
+          ><input type="radio" name="selector" id="all" value="all" />
+          All</label
+        >
+        <label for="active"
+          ><input type="radio" name="selector"" id="active"
+          value="active"/>Active</label
+        >
+        <label for="completed">
+          <input type="radio" name="selector"" id="completed"
+          value="completed"/>Completed
+        </label>
       </div>
 
       <div class="todo-list"></div>
 
-      <div class="todo-summary">
+      <div class="todo-summary d-flex">
         <div class="pending"></div>
-        <button type="button">clear</button>
+        <button type="button" name="clear">Clear</button>
       </div>
     </form>
 
     <script>
+      let todo = [
+        {
+          id: 0,
+          title: "Simple Todo App = AddElement (Edit đc nữa kaka)",
+          completed: false,
+        },
+        { id: 1, title: "Rất khoai nhưng vẫn hoàn thành", completed: true },
+      ];
       // [{title, completed, id}]
       function createCheckBox(e, value) {
+        // debugger;
         const todoCompleted = document.createElement("input");
+        e.appendChild(todoCompleted);
+
+        todoCompleted.checked = value;
         todoCompleted.value = value;
         todoCompleted.type = "checkbox";
         todoCompleted.id = "completed";
         todoCompleted.name = "completed";
-
-        e.appendChild(todoCompleted);
+        todoCompleted.classList.add("complete-check");
       }
 
       function createTitle(e, value) {
         const todoTitle = document.createElement("input");
+        e.appendChild(todoTitle);
+        if (todoTitle.previousElementSibling.checked)
+          todoTitle.classList.add("completed");
         todoTitle.value = value;
         todoTitle.type = "text";
         todoTitle.name = "title";
         todoTitle.classList.add("onchange");
-
-        e.appendChild(todoTitle);
       }
 
       function createDelete(e) {
         const todoDelete = document.createElement("button");
+        e.appendChild(todoDelete);
+
         todoDelete.type = "button";
         todoDelete.name = "delete";
         todoDelete.textContent = "Delete";
-
-        e.appendChild(todoDelete);
+        todoDelete.href = "";
       }
 
-      const todo = [
-        { id: 0, title: "Hihihi", completed: false },
-        { id: 1, title: "Hihihi", completed: false },
-      ];
+      function createEdit(e) {
+        const todoEdit = document.createElement("button");
+        e.appendChild(todoEdit);
+
+        todoEdit.type = "button";
+        todoEdit.name = "edit";
+        todoEdit.textContent = "Edit";
+        todoEdit.classList.add("no-display");
+      }
 
       function renderTodoList() {
         document.querySelector(".todo-list").innerHTML = "";
 
+        let countPending = 0;
         for (let i = 0; i < todo.length; i++) {
           let id = todo[i].id;
           let title = todo[i].title;
           let completed = todo[i].completed;
+          if (completed === false) countPending++;
 
           const todoItem = document.createElement("div");
-          todoItem.classList.add(`id-${id}`, `d-flex`);
+          todoItem.id = id;
+          todoItem.classList.add("todo-item");
+          todoItem.classList.add("d-flex");
 
           createCheckBox(todoItem, completed);
           createTitle(todoItem, title);
+          createEdit(todoItem);
           createDelete(todoItem);
 
           // todoItem.appendChild(input)
 
           document.querySelector(".todo-list").append(todoItem);
         }
+
+        const completeList = document.querySelectorAll(".complete-check");
+        completeList.forEach(function (index) {
+          index.addEventListener("change", checkCompleted);
+        });
+
+        const deleteList = document.querySelectorAll("button[name=delete]");
+        deleteList.forEach(function (index) {
+          index.addEventListener("click", clickDelete);
+        });
+
+        const summary = document.querySelector(".pending");
+        if (countPending === 0) summary.textContent = "Add more tasks";
+        else summary.textContent = `You have ${countPending} pendding task(s)`;
+
+        const clearBtn = document.querySelector("button[name=clear]");
+        clearBtn.addEventListener("click", function (e) {
+          todo = [];
+          renderTodoList();
+        });
+
+        const filter = document.querySelectorAll("input[name=selector]");
+
+        for (let index of filter) {
+          if (index.checked) checkFilter(index.value);
+        }
+
+        filter.forEach(function (index) {
+          index.addEventListener("change", checkFilter);
+        });
+
+        const inputChange = document.querySelectorAll("input[name=title]");
+        console.log(inputChange);
+        inputChange.forEach(function (index) {
+          index.addEventListener("input", showEdit);
+        });
+        inputChange.forEach(function (index) {
+          index.addEventListener("change", editTodo);
+        });
       }
 
       function addTodo() {
         let title = document.querySelector(".todo").value;
 
-        const id = Math.floor(
-          Math.random() * (100000 - todo.length) + todo.length
-        );
+        const id = todo.length;
         const completed = false;
 
-        let newTodo = {};
-        newTodo.id = id;
-        newTodo.title = title;
-        newTodo.completed = completed;
-        todo.push(newTodo);
+        if (!title);
+        else {
+          let newTodo = {};
+          newTodo.id = id;
+          newTodo.title = title;
+          newTodo.completed = completed;
+          todo.push(newTodo);
 
-        renderTodoList();
+          renderTodoList();
+        }
         document.querySelector(".todo").value = "";
       }
 
@@ -129,8 +380,94 @@
       //     console.log("changed");
       //   });
       // });
-      console.log(document.querySelector("div"));
-      function checkComplete() {}
+      // console.log(document.querySelector("div"));
+      renderTodoList();
+
+      function checkCompleted() {
+        let checkedTrue = this.value;
+        if (this.checked) {
+          checkedTrue = true;
+        } else {
+          checkedTrue = false;
+        }
+
+        const id = +this.parentElement.id;
+        // console.log(id);
+        todo.map(function (index) {
+          if (index.id === id) return (index.completed = checkedTrue);
+        });
+        console.log(todo);
+        renderTodoList();
+      }
+
+      function clickDelete() {
+        // console.log(this.parentElement);
+
+        const id = +this.parentElement.id;
+        console.log(id);
+        todo = todo.reduce(function (arr, index) {
+          if (index.id !== id) arr.push(index);
+          return arr;
+        }, []);
+
+        console.log(todo);
+        renderTodoList();
+      }
+
+      function checkFilter(value) {
+        let filterOrder;
+        if (!this.value) filterOrder = value;
+        else filterOrder = this.value;
+
+        const todoItems = document.querySelectorAll(".todo-item");
+        switch (filterOrder) {
+          case "active":
+            for (let index of todoItems) {
+              // debugger;
+              const childComplete = index.querySelector("input[type=checkbox]");
+              if (childComplete.value == "true")
+                index.classList.add("no-display");
+              else index.classList.remove("no-display");
+            }
+            break;
+          case "completed":
+            for (let index of todoItems) {
+              // debugger;
+              const childComplete = index.querySelector("input[type=checkbox]");
+              if (childComplete.value == "false")
+                index.classList.add("no-display");
+              else index.classList.remove("no-display");
+            }
+            break;
+          default:
+            for (let index of todoItems) {
+              // debugger;
+              index.classList.remove("no-display");
+            }
+        }
+      }
+
+      function showEdit() {
+        const editBtn = this.nextElementSibling;
+        editBtn.classList.remove("no-display");
+      }
+
+      function editTodo() {
+        let newTitle = this.value;
+        const editBtn = this.nextElementSibling;
+
+        editBtn.addEventListener("click", function (e) {
+          if (confirm("Cofirm your edit?")) {
+            const id = +this.parentElement.id;
+            todo.map(function (index) {
+              if (index.id === id) return (index.title = newTitle);
+            });
+            renderTodoList();
+          } else {
+            renderTodoList();
+          }
+        });
+      }
     </script>
   </body>
 </html>
