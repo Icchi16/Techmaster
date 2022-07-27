@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- LET VÀ CONST-->
+    <!-- 
+    Cho phép khai báo lai
+    + Var: có
+    + Let: Không
+    + const: Không
+
+    # Cho phép gán lại giá trị
+    + Var: có
+    + Let: Có
+    + const: Không
+
+    # Hoisting: Khi gọi hàm (function) các biến (var) được di chuyển lên đầu khối mã (file)
+    + Var: có
+    + Let: không
+    + const: Không
+
+    $ Scope: block code / function / module gọi biến khai bên tỏng các block
+    for / if else / while/ try - catch / switch case /
+    + Var: chỉ giới hạn bởi function
+    + Let: Mọi block
+    + const: Mọi block-->
+
+    <!-- TEMPLATE STRING -->
+    <!-- Các biểu mẫu chuỗi 
+    1. ``
+
+    ## ES5:
+    var |+| var2
+    array|.concat|(var)||.concat||(none).concat(var2)
+
+    ## ES6:
+    `${var} ${var}`
+    -->
+
+    <!-- AROW FUNCTION -->
+    <!-- Khai hàm không tên -->
+    <!-- 
+    ## ES5
+    var hello = fucntion (who) {
+        console.log(`Hello ${who}`)
+    }
+
+    ## ES6:
+    const hello = (who) => {
+        console.log(`Hello ${who}`)
+    }
+    == Không có this (được gán mặc định cho globalThis)
+    == Thường được sử dụng trong các phương thức yêu cầu hàm callback
+    == Không có argument va callee
+    == Không nên sử dụng làm phương thức của đối tượng
+    == Sử dụng pass this context cho mã trong hàm
+    == Không sử dụng được các phương thức blind, apply, call
+     -->
+
+    <!-- IMPLICIT RETURN -->
+    <!-- Khi Arrow Function chỉ có 1 câu lệnh và 1 giá trị, hoặc biểu thức thì 
+    có thể bỏ qua block code {} và từ khoá return -->
+
+    <!-- 
+        const sum = (a, b) => {
+            return a + b;
+        }
+
+        RÚT GỌN LẠI THÀNH:
+
+        const sum = (a, b) => a + b;
+     -->
+
+    <!-- TERNARY OPERATOR -->
+    <!-- 
+        Dạng rút gọn 
+      -->
+
+      <!-- DESTRUCURING -->
+      <!-- SPREAD OPERATOR -->
+      <!-- DEFAULT PARAMETER -->
+      <!-- REST PARAMETERS -->
+    <script>
+      const isOddNumber = (number) => {
+        if (number % 2 !== 0) return true;
+        else return false;
+      };
+
+      const maxOfTwo = (a, b) => {
+        if (a > b) return a;
+        else return b;
+      };
+
+      const divisibleByThreeAndFive = (number) => {
+        if (number % 3 === 0 && number % 5 === 0) return true;
+        else return false;
+      };
+
+      const filterRange = (arr, a, b) =>
+        arr.filter((num) => a <= num && num <= b);
+
+      let user = [
+        { name: "Duy", id: 1 },
+        { name: "Duy2", id: 1 },
+      ];
+
+      const getNames = (user) => user.map((index) => index.name);
+
+      const graduate = (point) => point < 4? "F"
+    </script>
+  </body>
+</html>

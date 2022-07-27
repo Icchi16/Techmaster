@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="ibm">
+      <h1>Body Mass Index</h1>
+
+      <div class="input">
+        <div class="weight">
+          <label for="weight-input"
+            ><input
+              type="number"
+              name="weight"
+              id="weight"
+              placeholder="Weight"
+            />kg</label
+          >
+        </div>
+        <div class="height">
+          <label for="height-input"
+            ><input
+              type="number"
+              name="height"
+              id="height"
+              placeholder="Height"
+              step="0.01"
+            />m</label
+          >
+        </div>
+        <div class="ibm-result"></div>
+        <div class="comment"></div>
+        <button type="submit">Calculate</button>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

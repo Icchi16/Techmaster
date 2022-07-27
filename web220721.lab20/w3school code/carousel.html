@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      .container {
+        width: 800px;
+        height: 350px;
+        border-radius: 10px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .slider {
+        width: 400%;
+        display: flex;
+        margin-left: 0;
+        transition: 2s;
+      }
+
+      .slide {
+        width: 800px;
+        transition: 2s;
+        overflow: hidden;
+      }
+
+      .rev {
+        position: relative;
+      }
+
+      .abs {
+        position: absolute;
+      }
+
+      .selector {
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        display: inline-block;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+
+      .prev,
+      .next {
+        top: 50%;
+        transform: translateY(-50%);
+
+        padding: 10px 5px;
+        color: white;
+        line-height: 100%;
+        font-size: 2rem;
+
+        cursor: pointer;
+        transition: 0.5s;
+        user-select: none;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.39);
+      }
+
+      .prev {
+        left: 0;
+        border-radius: 0 5px 5px 0;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: white;
+      }
+
+      .margin-1 {
+        margin-left: 0;
+      }
+
+      .margin-2 {
+        margin-left: -800px;
+      }
+
+      .margin-3 {
+        margin-left: -1600px;
+      }
+
+      .margin-4 {
+        margin-left: -2400px;
+      }
+
+      .caption {
+        height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+
+        bottom: 30px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container rev">
+      <div class="slider" name="slider">
+        <div class="slide slide-1 rev" id="1">
+          <img
+            src="https://www.w3schools.com/howto/img_nature_wide.jpg"
+            alt=""
+          />
+          <div class="caption abs">Caption 1</div>
+        </div>
+        <div class="slide slide-2 rev" id="2">
+          <img src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="" />
+          <div class="caption abs">Caption 2</div>
+        </div>
+        <div class="slide slide-3 rev" id="3">
+          <img
+            src="https://www.w3schools.com/howto/img_lights_wide.jpg"
+            alt=""
+          />
+          <div class="caption abs">Caption 3</div>
+        </div>
+        <div class="slide slide-4 rev" id="4">
+          <img
+            src="https://www.w3schools.com/howto/img_mountains_wide.jpg"
+            alt=""
+          />
+          <div class="caption abs">Caption 4</div>
+        </div>
+      </div>
+
+      <div class="prev abs" onclick="moveSlide(-1)">&#10094;</div>
+      <div class="next abs" onclick="moveSlide(1)">&#10095;</div>
+
+      <div class="slide-num-text"></div>
+
+      <div class="selector abs">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <script>
+      let counter = 1;
+
+      const slider = document.querySelector("div[name=slider]");
+      const dots = document.querySelectorAll(".dot");
+
+      const toSilde = (n) => {
+        const reCounter =
+          n <= 0 ? (n = 1) : n > dots.length ? (n = dots.length) : n;
+        n = reCounter;
+
+        dots.forEach((index) => index.classList.remove("active"));
+        dots[n - 1].classList.add("active");
+
+        slider.classList.remove(...slider.classList);
+        slider.classList.add("slider");
+        slider.classList.toggle(`margin-${n}`);
+
+        counter = n;
+      };
+
+      toSilde(counter);
+      const moveSlide = (n) => toSilde(counter + n);
+      const currentSlide = (n) => toSilde(n);
+    </script>
+  </body>
+</html>
