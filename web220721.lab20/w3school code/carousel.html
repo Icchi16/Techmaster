@@ -178,8 +178,7 @@
       const dots = document.querySelectorAll(".dot");
 
       const toSilde = (n) => {
-        const reCounter =
-          n <= 0 ? (n = 1) : n > dots.length ? (n = dots.length) : n;
+        const reCounter = n <= 0 ? 1 : n > dots.length ? dots.length : n;
         n = reCounter;
 
         dots.forEach((index) => index.classList.remove("active"));
