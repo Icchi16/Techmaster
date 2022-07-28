@@ -177,6 +177,9 @@
       const slider = document.querySelector("div[name=slider]");
       const dots = document.querySelectorAll(".dot");
 
+      const moveSlide = (n) => toSilde(counter + n);
+      const currentSlide = (n) => toSilde(n);
+
       const toSilde = (n) => {
         const reCounter = n <= 0 ? 1 : n > dots.length ? dots.length : n;
         n = reCounter;
@@ -192,8 +195,7 @@
       };
 
       toSilde(counter);
-      const moveSlide = (n) => toSilde(counter + n);
-      const currentSlide = (n) => toSilde(n);
+      
     </script>
   </body>
 </html>

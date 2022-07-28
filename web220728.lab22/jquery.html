@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  </head>
+  <body>
+    <div class="" id="app">
+      <h1 class="heading"></h1>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item">Item 3</div>
+      <div class="item">Item 4</div>
+      <div class="item">Item 5</div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+    <!-- <script>
+      const h1 = document.querySelector(".heading");
+      h1.textContent = "Hello";
+      h1.addEventListener("click", function () {});
+      const div = document.createElement("div");
+      div.classList.add("container");
+
+      const $h1 = $(".heading");
+      $h1.text("Hahahaha");
+      $h1.on("click", function () {});
+      $h1.off("click", function () {});
+
+      const $div = $(<div classname="container" />);
+    </script> -->
+
+    <script>
+      $(".carousel").slick();
+    </script>
+  </body>
+</html>
