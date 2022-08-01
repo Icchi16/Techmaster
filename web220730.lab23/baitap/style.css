@@ -46,10 +46,20 @@ img {
   align-items: flex-end;
 
   font-size: 1.2rem;
+
+  margin: -5px 0;
   height: 30%;
+
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
 }
 
 .post-body {
+  margin: -5px 0;
+
+  align-self: flex-start;
+  margin-top: 10px;
+
   height: 70%;
 }
 
