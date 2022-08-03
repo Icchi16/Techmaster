@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="flex justify-between align-center">
+          <h1 class="logo">Todo App</h1>
+
+          <!-- <div class="user-info flex align-center">
+                        <div class="user-avatar-box">
+                            <img
+                                src="./avatar.jpeg"
+                                alt=""
+                                class="user-avatar"
+                            />
+                        </div>
+
+                        <div class="user-name">Ba Nguyễn</div>
+                    </div> -->
+        </div>
+      </div>
+    </header>
+
+    <main class="signup-main">
+      <div class="container">
+        <form action="" class="signup-form">
+          <div class="form-header">
+            <div class="form-heading">
+              <h1>Sign Up</h1>
+            </div>
+          </div>
+          <div class="form-body">
+            <div class="form-field">
+              <label for="username">Username:</label>
+              <input type="text" name="username" id="username" placeholder="ba"
+              pattern="[a-zA-Z0-9-]{4,10}" title="Username must be 4 - 10 characters long, contain only letters or numbers, and must begin with a character" " />
+            </div>
+            <div class="form-field">
+              <label for="firstname">First Name: </label>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                pattern=".{1,}"
+                title="At least one character"
+              />
+            </div>
+            <div class="form-field">
+              <label for="lastname">Last Name: </label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                pattern=".{1,}"
+                title="At least one character"
+              />
+            </div>
+            <div class="form-field">
+              <label for="password">Password: </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                pattern=".{6,20}"
+                title="Password must be 6 - 20 characters long"
+              />
+            </div>
+          </div>
+          <div class="form-footer">
+            <span
+              ><button class="btn-signup">Sign Up</button
+              ><a href="signin.html" class="login-link">or Log In</a></span
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="signup.js" type="module"></script>
+  </body>
+</html>
