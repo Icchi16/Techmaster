@@ -14,6 +14,7 @@ form.addEventListener("submit", async (e) => {
     const [_, token] = headers.authorization.split(" ");
 
     localStorage.setItem("token", token);
+    console.log(token);
 
     alert("Login successfully, redirect to homepage!");
 
@@ -30,4 +31,3 @@ signup.addEventListener("click", () => {
   document.location.href = "signup.html";
 });
 //
-

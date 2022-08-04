@@ -56,3 +56,24 @@ export const signup = (user) => {
 
   return axios.request(reqOptions);
 };
+
+export const getTasks = async () => {
+  const token = localStorage.getItem("token");
+  // if (!token) {
+  //   window.location.href = "signin.html";
+  // }
+
+  let headers = {
+    Authorization: `Bearer ${token}`,
+  };
+
+  let reqOptions = await {
+    url: "https://todo-api-with-auth.herokuapp.com/api/tasks",
+    method: "GET",
+    headers,
+  };
+
+  return axios.request(reqOptions);
+};
+
+export const addTasks = async () => {};
