@@ -2,7 +2,6 @@ import { getUser } from "./api.js";
 import { getTasks } from "./api.js";
 // import { addTasks } from "./api.js";
 
-
 getUser()
   .then((user) => {
     document.querySelector(".user-info").innerHTML = `
@@ -18,7 +17,7 @@ getUser()
       <ul class="user-list-ol absolute">
         <li class="user-list-li user-profile">Profile</li>
         <li class="user-list-li user-avatar">Avatar</li>
-        <li class="user-list-li user-signout">Sign out</li>
+        <li class="user-list-li user-signout">Signout</li>
       </ul>
     </div>
    `;
@@ -26,7 +25,7 @@ getUser()
     const singoutBtn = document.querySelector(".user-signout");
     singoutBtn.addEventListener("click", () => {
       localStorage.removeItem("token");
-      if (confirm("Do You Want To Sign Out?")) {
+      if (confirm("Do You Want To Signout?")) {
         getUser();
         alert("You've Singed Out!");
       }
@@ -56,7 +55,7 @@ getUser()
       }
     };
 
-    renderTask(); 
+    renderTask();
   })
   .catch((err) => {
     console.log(err);

@@ -19,6 +19,7 @@ form.addEventListener("submit", async (e) => {
     });
 
     alert("Đăng ký thành công!");
+    document.location.href = "signin.html";
   } catch ({ response }) {
     console.log(response.data.error);
     alert(response.data.error);

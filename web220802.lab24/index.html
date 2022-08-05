@@ -29,6 +29,17 @@
     <main class="main">
       <div class="container">
         <div class="task-header"><h2 class="todo-heading">Todo List</h2></div>
+        <div class="todo-input">
+          <label for="todo-add"
+            ><input
+              type="text"
+              name="todo-add"
+              id="todo-add"
+              placeholder="Type your new task here"
+              pattern="[a-zA-z0-9-]+"
+          /></label>
+          <button>Add task</button>
+        </div>
         <div class="task-list">
           <!-- <div class="task-1 flex" id="1">
             <div class="task-id">1</div>

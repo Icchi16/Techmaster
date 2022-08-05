@@ -76,4 +76,4 @@ export const getTasks = async () => {
   return axios.request(reqOptions);
 };
 
-export const addTasks = async () => {};
+export const addTasks = async (task) => {};
