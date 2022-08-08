@@ -1,0 +1,139 @@
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.logo {
+  height: 20px;
+}
+
+.z-index {
+  z-index: 1;
+}
+
+.lang-btn {
+  background-color: rgba(0, 0, 139, 0);
+  border: none;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.new {
+  background-color: greenyellow;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 1px 2px;
+
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.carousel-ctr-spacing {
+  width: fit-content !important;
+  margin: 20px;
+}
+
+.carousel-ctr {
+  background-color: black;
+  border-radius: 50px;
+}
+
+.section-video {
+  position: relative;
+}
+
+.section-video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url(https://fiitii.com/wp-content/uploads/2022/01/happy-party.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .section-video::before {
+    position: fixed;
+  }
+  .product-1-container {
+    background-image: url(https://fiitii.com/wp-content/uploads/2022/01/FiiTii-banner-HiFiPods.webp) !important;
+    background-position: center center !important;
+    background-size: 1100px auto !important;
+    z-index: 1;
+  }
+  .new-product::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    background-image: url(https://fiitii.com/wp-content/uploads/2022/01/Fiitii.webp) !important;
+  background-size: cover;
+    opacity: 0.2;
+    z-index: 0;
+  }
+  .product-1-container::before {
+    background-color: white !important;
+    z-index: -1;
+  }
+}
+
+.product-1 {
+  position: relative;
+}
+
+.product-1-container {
+  height: 650px;
+  /* background-image: url(https://fiitii.com/wp-content/uploads/2022/01/FiiTii-banner-HiFiPods.webp); */
+  background-image: url(https://fiitii.com/wp-content/uploads/2022/01/HiFiPods-banner.webp);
+  background-position: center 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product-1-container::before {
+  content: "";
+  position: absolute;
+  background-color: #292929;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.text-color {
+  color: #b1b1b1;
+  width: 50%;
+  text-align: center;
+}
+
+.product-title {
+  margin-bottom: 30px;
+}
+
+.product-hook {
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  padding: 6px 20px;
+  background-color: greenyellow;
+  border-radius: 7px;
+  transition: 400ms;
+  border: 0;
+  margin-bottom: 30px;
+}
+
+.shop-btn:hover {
+  background-color: black;
+  color: greenyellow;
+}

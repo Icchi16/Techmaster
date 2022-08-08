@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand m-md-0 d-flex align-items-center" href="#"
+          ><img
+            src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/05/cropped-FiiTii-logo-135x35px.png?w=563&ssl=1"
+            alt=""
+            class="logo"
+        /></a>
+
+        <div
+          class="offcanvas offcanvas-start align-items-md-center w-50"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <div></div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body d-md-none">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#">HiFiAir</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">HiFiPods</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O5 Plus Gen 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O5 Plus</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">O7</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">i2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About FiiTii</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help Center</a>
+              </li>
+              <!-- <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li> -->
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form> -->
+          </div>
+
+          <div class="offcanvas-body d-none d-md-block">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item position-relative px-4 z-index">
+                <a href="" class="nav-link"
+                  >HiFi Series <span class="new position-absolute">NEW</span></a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a href="" class="nav-link">True Wireless</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">Wireless Earbuds</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">About FiiTii</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <select name="lang-btn" id="lang-btn" class="lang-btn">
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </nav>
+
+    <header class="header">
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide d-md-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/06/HAhomeMobile.jpg?fit=800%2C1370&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/05/HP-banner-.webp?fit=800%2C1370&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/05/O7benner.webp?fit=800%2C1370&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/05/o5-banner-.webp?fit=800%2C1370&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/05/i2-banner-1.webp?fit=800%2C1370&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div
+        id="carousel2"
+        class="carousel slide d-none d-md-block"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/06/Hifipods-banner.webp?resize=1920%2C980&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/06/HAhomebanner.jpg?resize=1920%2C980&ssl=1"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev carousel-ctr-spacing"
+          type="button"
+          data-bs-target="#carousel2"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon carousel-ctr"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next carousel-ctr-spacing"
+          type="button"
+          data-bs-target="#carousel2"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon carousel-ctr"
+            aria-hidden="true"
+          ></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section-video">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="video mt-4 mb-4">
+                <video
+                  class="jet-video-player jet-video-html5-player w-100"
+                  src="https://fiitii.com/wp-content/uploads/2021/12/FiiTii-HiFiPods-video-final-20211216.mp4"
+                  loop=""
+                  controls=""
+                  playsinline=""
+                  controlslist="nodownload"
+                  poster="https://fiitii.com/wp-content/uploads/2022/05/HiFiPods.webp"
+                ></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-product">
+        <div class="product-1">
+          <div class="product-1-container">
+            <!-- <img
+              src="https://fiitii.com/wp-content/uploads/2022/01/FiiTii-banner-HiFiPods.webp"
+              alt=""
+            /> -->
+            <div
+              class="product-1-meta d-flex flex-column justify-content-end justify-content-md-center align-items-center h-100"
+            >
+              <div
+                class="product-title product-1-title text-color fs-5 fw-semibold"
+              >
+                HiFiPods
+              </div>
+              <div
+                class="product-hook product-1-title text-color fs-1 fw-bolder"
+              >
+                MULTI DRIVER ANC EARBUDS
+              </div>
+              <button class="shop-btn fw-semibold">Shop ></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sale"></section>
+
+      <section class="showcase">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="product-card">
+                <div class="product-header">
+                  <div class="product-thumbnail">
+                    <img
+                      src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/01/HiFiPods.png?w=600&ssl=1"
+                      alt=""
+                      class="thumbnail"
+                    />
+                  </div>
+                </div>
+
+                <div class="product-main">
+                  <div class="row">
+                    <div class="col">
+                      <div class="product-img">
+                        <img
+                          src="https://i0.wp.com/fiitii.com/wp-content/uploads/2022/01/Hifipods-01-1.png?w=447&ssl=1"
+                          alt=""
+                          class="product"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-meta">
+                      <div class="product-name"><b>HiFi</b>Pods</div>
+                      <div class="product-price">$199.00-$218.00</div>
+                      <div class="product-tag">
+                        2022 New Release / True Wireless Earbuds / Multi driver
+                        ANC earbuds / ENC clear calls / 70 hours / 7x-aerometal
+                        housing / IPX7 waterproof
+                      </div>
+
+                      <button name="product-detail" id="product-detail">
+                        Read more >
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature"></section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
