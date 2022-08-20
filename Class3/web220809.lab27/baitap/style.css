@@ -11,6 +11,7 @@
 }
 
 :root {
+  --secondary: #d0d0d0;
   --primary: #34251f;
   --text-main: "Lato", sans-serif;
   --text-hook: "Frank Ruhl Libre", sans-serif;
@@ -25,6 +26,7 @@ body {
 }
 
 img {
+  margin: 0;
   max-width: 100%;
   height: auto;
   line-height: 0;
@@ -38,9 +40,9 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1174px;
 
-  padding: 0 15px;
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -91,6 +93,7 @@ a {
   font-size: 16px;
   line-height: 100%;
   padding: 10px 35px;
+  transition: all 400ms;
 }
 
 /* Header */
@@ -159,6 +162,11 @@ a {
   margin-right: 48px;
 }
 
+.login-btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
 .bg-extra-tleft {
   width: 425px;
   height: 529px;
@@ -184,9 +192,6 @@ a {
   overflow: hidden;
   margin-left: 170px;
   margin-bottom: 175px;
-}
-
-.head-img img {
 }
 
 .head-hook {
@@ -265,12 +270,13 @@ a {
 .best-fashion {
   margin-top: 131px;
   margin-left: 35px;
+  line-height: 0;
 }
 
 .sect-1-img {
   border-top-left-radius: 160px;
   overflow: hidden;
-  margin-bottom: -6px;
+  /* margin-bottom: -6px; */
 }
 
 .sect-1-img > img {
@@ -336,4 +342,124 @@ a {
 .black {
   background-color: black;
   height: 400px;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  margin-bottom: 21px;
+  text-transform: capitalize;
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* Best-Seller Section */
+
+.section-best-seller {
+  background-color: #2c1915;
+}
+
+.section-best-seller > .container {
+  padding: 39px 0;
+  gap: 16px;
+}
+
+.best-seller-meta {
+  flex-basis: 506px !important;
+  flex-shrink: 0;
+}
+
+.best-seller-desc {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: capitalize;
+}
+
+.best-seller-login {
+  display: inline-block;
+  margin-top: 40px;
+  border-color: var(--secondary);
+  color: var(--secondary);
+  border-radius: 0;
+  padding: 17px 70px;
+}
+
+.product-card {
+  background-color: white;
+  height: 100%;
+}
+/* width: 325px;
+  height: 460px;
+} */
+
+.best-seller-carousel {
+  overflow: hidden;
+  margin-right: -190px;
+}
+
+.swiper {
+  height: 510px;
+}
+
+.swiper-slide {
+  flex: 0 0 325px;
+  height: 460px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.position {
+  display: flex !important;
+  width: fit-content !important;
+  bottom: 5px !important;
+  left: 0 !important;
+  right: 100% !important;
+
+  clear: both;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  border: 3px solid white;
+  background: none;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.product-meta {
+  margin-top: 3px;
+  padding: 0 22px;
+}
+
+.product-name {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.org-price,
+.new-price {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.org-price {
+  text-decoration: line-through;
+  color: #00000063;
+}
+
+.new-price {
+  color: #000000;
+  font-weight: 700;
+  margin-left: 14px;
 }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      form {
+        width: 500px;
+        border: 2px solid black;
+        margin: 10px auto;
+        padding: 10px 20px;
+      }
+
+      form > * {
+        margin-bottom: 20px;
+      }
+
+      label,
+      input,
+      select {
+        display: block;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      option {
+        width: 20%;
+      }
+
+      select {
+        width: 100%;
+      }
+
+      .flex {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .address {
+        gap: 5px;
+      }
+
+      .address > *,
+      .form-first > * {
+        flex: 1 1 calc(100% / 3);
+      }
+
+      .form-first {
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <h1 class="form-header">Thông tin liên hệ</h1>
+
+      <div class="form-first flex">
+        <label for="user-name"
+          >Họ và Tên
+          <input type="text" id="user-name" name="user-name" />
+        </label>
+        <label for="user-mail"
+          >Email
+          <input type="email" id="user-mail" name="user-mail" />
+        </label>
+      </div>
+
+      <div class="address flex">
+        <label for="user-city" class="city"
+          >Thành phố<select name="user-city" id="user-city" class="user-city">
+            <option value="" selected>Chọn Thành Phố</option>
+          </select></label
+        >
+        <label for="user-district" class="district"
+          >Quận Huyện<select
+            name="user-district"
+            id="user-district"
+            class="user-district"
+          >
+            <option value="" selected>Chọn Quận Huyện</option>
+          </select></label
+        >
+        <label for="user-ward" class="ward"
+          >Phường Xã<select name="user-ward" id="user-ward" class="user-ward">
+            <option value="" selected>Chọn Phường Xã</option>
+          </select></label
+        >
+      </div>
+
+      <label for="user-address" class="user-address"
+        >Địa chỉ cụ thể<input type="text" name="user-address" id="user-address"
+      /></label>
+      <button type="submit">Gửi thông tin liên hệ</button>
+    </form>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
