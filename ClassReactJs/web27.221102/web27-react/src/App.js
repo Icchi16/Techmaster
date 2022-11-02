@@ -2,16 +2,16 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function Header() {
-  return <div className="Header-container">Our Reviews</div>;
+  return <h1 className="Header-container">Our Reviews</h1>;
 }
 
 function ReviewCard() {
   return (
-    <div className="ReivewCard">
+    <div className="Reivew-card">
       <div className="Review">
         <div className="Author">
           <div className="Avatar">
-            <img src="" alt="" srcset="" />
+            <img src="./avatar.jpeg"/>
           </div>
           <div className="Info">
             <p className="Info-name">Susan Smith</p>
