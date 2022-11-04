@@ -7,7 +7,48 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Header-container{
+font-size: 3rem;
+font-weight: 900;
+position: relative;
 }
+
+.Header-container::after{
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 6px;
+  background-color: aqua;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Info-name{
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+}
+
+.Info-job{
+  color: blue;
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.Control-left,.Control-right{
+  display:inline-block;
+  color: blue;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.Control-left::after{
+  font-family:'Bootstrap-icons';
+  content: '\F284';
+}
+
+.Control-right::after{
+  font-family:'Bootstrap-icons';
+  content: '\F285';}
