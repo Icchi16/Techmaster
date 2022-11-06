@@ -83,6 +83,7 @@ audio {
 
 .song-control i {
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .song-playpause i {
