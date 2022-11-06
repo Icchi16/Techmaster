@@ -47,7 +47,7 @@ audio {
 .playing {
   /* scale: 0.9; */
   border-radius: 50%;
-  animation: rotating 10s linear infinite;
+  animation: rotating 20s linear infinite;
 }
 
 .song-info {
@@ -81,9 +81,10 @@ audio {
   align-items: center;
 }
 
-.song-control i {
+.song-control * {
   font-size: 3rem;
   cursor: pointer;
+  line-height: 0;
 }
 
 .song-playpause i {
@@ -124,7 +125,7 @@ audio {
 
 .progress-bar {
   --completed-time: 200px;
-
+  margin-top: 30px;
   background-color: rgba(255, 255, 255, 0.329);
   border-radius: 50px;
   height: 8px;

@@ -11,6 +11,18 @@ const songList = [
     artist: "The Flob",
     img: "./public/img/song2.jpg",
   },
+  {
+    src: "./public/songs/song3.mp3",
+    name: "Lộn Xộn II",
+    artist: "Đen",
+    img: "./public/img/song3.jpg",
+  },
+  {
+    src: "./public/songs/song4.mp3",
+    name: "As It Was",
+    artist: "Suitx ft. Tars. ft. Booty Leak",
+    img: "./public/img/song4.jpeg",
+  },
 ];
 
 const App = () => {
@@ -81,6 +93,7 @@ const App = () => {
 
   return (
     <div className="music-container">
+      <audio ref={audioPlayer} src={nowPlaying.src} controls></audio>
       <div className="song-meta">
         <div className="song-img" ref={songImg}>
           <img src={nowPlaying.img} />
@@ -90,7 +103,6 @@ const App = () => {
           <div className="song-artist">{nowPlaying.artist}</div>
         </div>
       </div>
-      <audio ref={audioPlayer} src={nowPlaying.src} controls></audio>
       <div className="song-control">
         <div className="song-prev" onClick={prev}>
           <i className="bi bi-skip-start-btn-fill"></i>
