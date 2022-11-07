@@ -28,7 +28,6 @@ const songList = [
 const App = () => {
   const [songCount, setSongCount] = React.useState(0);
   const [isPlaying, setIsPlaying] = React.useState(false);
-  const [time, setTime] = React.useState(0);
 
   const audioPlayer = React.useRef();
   const songImg = React.useRef();
@@ -37,7 +36,7 @@ const App = () => {
 
   React.useEffect(() => {
     renderProgressBar();
-  }, []);
+  }, [audioPlayer?.current?.readyState]);
 
   const handleChangeTime = () => {
     audioPlayer.current.currentTime = progressBar.current.value;
@@ -89,11 +88,25 @@ const App = () => {
     animationRef.current = requestAnimationFrame(whilePlaying);
   };
 
+  const playNext = () => {
+    songCount == songList.length - 1
+      ? setSongCount(0)
+      : setSongCount(songCount + 1);
+    audioPlayer.current.onloadedmetadata = () => {
+      audioPlayer.current.play();
+    };
+  };
+
   const nowPlaying = songList[songCount];
 
   return (
     <div className="music-container">
-      <audio ref={audioPlayer} src={nowPlaying.src} controls></audio>
+      <audio
+        ref={audioPlayer}
+        src={nowPlaying.src}
+        controls
+        onEnded={playNext}
+      ></audio>
       <div className="song-meta">
         <div className="song-img" ref={songImg}>
           <img src={nowPlaying.img} />
