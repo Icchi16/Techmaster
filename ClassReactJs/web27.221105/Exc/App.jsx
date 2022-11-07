@@ -58,6 +58,9 @@ const App = () => {
       ? setSongCount(songList.length - 1)
       : setSongCount(songCount - 1);
     setIsPlaying(false);
+    audioPlayer.current.onloadedmetadata = () => {
+      audioPlayer.current.pause();
+    };
   };
 
   const next = () => {
@@ -66,6 +69,9 @@ const App = () => {
       ? setSongCount(0)
       : setSongCount(songCount + 1);
     setIsPlaying(false);
+    audioPlayer.current.onloadedmetadata = () => {
+      audioPlayer.current.pause();
+    };
   };
 
   const togglePlayPause = () => {
