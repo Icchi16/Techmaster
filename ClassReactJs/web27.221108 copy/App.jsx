@@ -1,10 +1,8 @@
 const Todo = ({ userId, id, title, completed }) => {
-  const [checkComplete, setCheckComplete] = React.useState(completed);
+  const [checkComplete, setCheckComplete] = React.useState();
 
   const handleCompleteChange = (e) => {
-    completed = !e.target.completed;
-    console.log(!completed);
-    setCheckComplete(!completed);
+    e.target.checked = !e.target.checked;
   };
 
   return (
@@ -12,7 +10,6 @@ const Todo = ({ userId, id, title, completed }) => {
       <div className="title">{title}</div>
       <input
         type="checkbox"
-        id={id}
         value={completed}
         checked={completed}
         onChange={handleCompleteChange}
@@ -21,35 +18,20 @@ const Todo = ({ userId, id, title, completed }) => {
   );
 };
 
-<<<<<<< HEAD
 const TodoList = ({ todos, userIdInput, setUserIdInput }) => {
-  const [filterTodos, setFilterTodos] = React.useState(todos);
-  React.useEffect(() => {
-    !userIdInput
-      ? setFilterTodos(todos)
-      : setFilterTodos(todos.filter((e) => e.userId == userIdInput));
-  }, [todos, userIdInput]);
-=======
-const TodoList = ({ todos, userIdInput }) => {
   const [filteredTodos, setFilteredTodos] = React.useState(todos);
 
   React.useEffect(() => {
-    setFilteredTodos(
-      !userIdInput ? todos : todos.filter((e) => e.userId == userIdInput)
-    );
-  }, [userIdInput, todos]);
->>>>>>> 492829aca35d81f47caeb888dbfe07633896032b
-
+    console.log("change")
+  }, [todos?.value]);
   return (
     <div className="todo-list">
       <div> this : {userIdInput}</div>
-<<<<<<< HEAD
-      {filterTodos.map((todo) => (
-=======
-      {filteredTodos.map((todo) => (
->>>>>>> 492829aca35d81f47caeb888dbfe07633896032b
-        <Todo key={todo.id} {...todo} />
-      ))}
+      {!userIdInput
+        ? todos.map((todo) => <Todo key={todo.id} {...todo} />)
+        : todos
+            .filter((task) => task.userId == userIdInput)
+            .map((todo) => <Todo key={todo.id} {...todo} />)}
     </div>
   );
 };
@@ -66,7 +48,9 @@ TodoList.propTypes = PropTypes.arrayOf(TodoType);
 
 const App = () => {
   const [todos, setTodos] = React.useState([]);
-  const [userIdInput, setUserIdInput] = React.useState();
+  const [userIdInput, setUserIdInput] = React.useState([]);
+
+  const userFilter = React.useRef();
 
   const controller = new AbortController();
 
@@ -84,6 +68,11 @@ const App = () => {
     };
   }, []);
 
+  const handleUserId = (e) => {
+    setUserIdInput(e.target.value);
+    console.log(userIdInput);
+  };
+
   return (
     <div className="todo-app">
       <div className="filter">
@@ -93,6 +82,7 @@ const App = () => {
           placeholder="Input User ID"
           defaultValue=""
           onChange={(e) => setUserIdInput(e.target.value)}
+          ref={userFilter}
         />
       </div>
       <TodoList
