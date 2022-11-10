@@ -1,17 +1,19 @@
 import React from "react";
-import styles from "./PostCard.module.css";
-import PropTypes from "prop-types";
+import styles from "./Hit.module.css";
+import PropTypes from "proptypes";
 
-const PostCard = ({ title, points, by, comments, url }) => {
+const Hit = ({ hit }) => {
   return (
     <div className={styles.card}>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.points}>
-        {points} by {by} | {comments}
+      <div>
+        <div className={styles.title}>{hit.title}</div>
+        <div className={styles.points}>
+          {hit.points} by {hit.author} | {hit.num_comments}
+        </div>
       </div>
       <div>
-        <a href={url} className={styles.readmore}>
-          Readmore
+        <a href={hit.url} className={styles.readmore}>
+          Read More
         </a>
         <button className={styles.remove}>Remove</button>
       </div>
@@ -19,14 +21,15 @@ const PostCard = ({ title, points, by, comments, url }) => {
   );
 };
 
-PostCard.propTypes = PostType;
-
-export const PostType = PropTypes.shape({
+export const HitType = PropTypes.shape({
+  objectId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  points: PropTypes.any.isRequired,
-  by: PropTypes.string.isRequired,
-  commnents: PropTypes.number.isRequired,
+  points: PropTypes.number.isRequired,
+  author: PropTypes.string.isRequired,
+  num_commnents: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
 });
+
+Hit.propTypes = HitType;
 
 export default Hit;

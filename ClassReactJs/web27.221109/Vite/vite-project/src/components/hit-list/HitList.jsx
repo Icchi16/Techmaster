@@ -1,10 +1,18 @@
 import React from "react";
-import HitCard, { HitType } from "../hit/Hit";
-import styles 
-import PropTypes from
+import Hit, { HitType } from "../hit/Hit";
+import styles from "./HitList.module.css";
+import PropTypes from "proptypes";
 
-const HitList = ({hits}) => {
-    return(
-        <div>{hits.map(hit=>hit) hit={hit}}</div>
-    )
+const HitList = ({ hits }) => {
+  return (
+    <div className={styles.list}>
+      {hits.map((hit) => (
+        <Hit key={hit.objectID} hit={hit} />
+      ))}
+    </div>
+  );
 };
+
+export const HitListType = PropTypes.arrayOf(HitType);
+
+export default HitList;
