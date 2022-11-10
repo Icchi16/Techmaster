@@ -6,18 +6,20 @@ const PostCard = ({ title, points, by, comments, url }) => {
   return (
     <div className={styles.card}>
       <div className={styles.title}>{title}</div>
-      <div className="info">
+      <div className={styles.points}>
         {points} by {by} | {comments}
       </div>
       <div>
-        <a href={url} className="readmore">
+        <a href={url} className={styles.readmore}>
           Readmore
         </a>
-        <button className="delete">Delete</button>
+        <button className={styles.remove}>Remove</button>
       </div>
     </div>
   );
 };
+
+PostCard.propTypes = PostType;
 
 export const PostType = PropTypes.shape({
   title: PropTypes.string.isRequired,
@@ -26,3 +28,5 @@ export const PostType = PropTypes.shape({
   commnents: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
 });
+
+export default Hit;

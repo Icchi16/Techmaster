@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Hit from "./components/hit/Hit";
 import { getNews } from "./services/news.services";
 
 function App() {
@@ -20,5 +21,13 @@ function App() {
     };
   }, [input]);
 }
+
+return (
+  <div className="App">
+    <h1>dfsfsd</h1>
+
+    <Hit />
+  </div>
+);
 
 export default App;
