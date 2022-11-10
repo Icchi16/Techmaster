@@ -1,10 +1,8 @@
 const Todo = ({ userId, id, title, completed }) => {
-  const [checkComplete, setCheckComplete] = React.useState(completed);
+  const [checkComplete, setCheckComplete] = React.useState();
 
   const handleCompleteChange = (e) => {
-    completed = !e.target.completed;
-    console.log(!completed);
-    setCheckComplete(!completed);
+    e.target.checked = !e.target.checked;
   };
 
   return (
@@ -12,7 +10,6 @@ const Todo = ({ userId, id, title, completed }) => {
       <div className="title">{title}</div>
       <input
         type="checkbox"
-        id={id}
         value={completed}
         checked={completed}
         onChange={handleCompleteChange}
@@ -21,21 +18,20 @@ const Todo = ({ userId, id, title, completed }) => {
   );
 };
 
-const TodoList = ({ todos, userIdInput }) => {
+const TodoList = ({ todos, userIdInput, setUserIdInput }) => {
   const [filteredTodos, setFilteredTodos] = React.useState(todos);
 
   React.useEffect(() => {
-    setFilteredTodos(
-      !userIdInput ? todos : todos.filter((e) => e.userId == userIdInput)
-    );
-  }, [userIdInput, todos]);
-
+    console.log("change")
+  }, [todos?.value]);
   return (
     <div className="todo-list">
       <div> this : {userIdInput}</div>
-      {filteredTodos.map((todo) => (
-        <Todo key={todo.id} {...todo} />
-      ))}
+      {!userIdInput
+        ? todos.map((todo) => <Todo key={todo.id} {...todo} />)
+        : todos
+            .filter((task) => task.userId == userIdInput)
+            .map((todo) => <Todo key={todo.id} {...todo} />)}
     </div>
   );
 };
@@ -52,7 +48,7 @@ TodoList.propTypes = PropTypes.arrayOf(TodoType);
 
 const App = () => {
   const [todos, setTodos] = React.useState([]);
-  const [userIdInput, setUserIdInput] = React.useState();
+  const [userIdInput, setUserIdInput] = React.useState([]);
 
   const userFilter = React.useRef();
 
