@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./global.css";
 import {
   Route,
   RouterProvider,
@@ -12,6 +11,11 @@ import Home from "./pages/home/Home";
 import Layout from "./components/layout/Layout";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./styles/global.css"
+import "./styles/header.css"
+import "./styles/footer.css"
+import "./styles/index.css";
+
 
 const routes = createRoutesFromElements(
   <Route element={<Layout />}>
