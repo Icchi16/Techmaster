@@ -1,0 +1,243 @@
+/* Sect-2 Hot */
+.sect-2 {
+  background: var(--nav-bg-2);
+}
+
+/* sect 3 For U*/
+.sect-3 {
+  background: var(--index-bg-2);
+}
+
+.list-container {
+  margin-top: 70px;
+}
+
+.list-link,
+.list-link.active {
+  box-sizing: border-box;
+  font-size: var(--deskt-1-5-rem);
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--color-main);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.5s ease;
+  padding: 0;
+  margin: 8px 0 !important;
+}
+
+.list-link.active {
+  font-weight: 700;
+}
+
+.custom-card {
+  border: none;
+}
+
+.custom-meta {
+  background-color: #232121;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--bs-border-radius) !important;
+  box-shadow: #85796d57 0px 10px 20px, #85796d3f 0px 6px 6px;
+}
+
+.custom-flex {
+  flex: 1 1 45%;
+}
+
+.custom-thumbnail {
+  z-index: 1;
+  border-radius: ;
+}
+
+.custom-visible {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.custom-active:hover .custom-visible {
+  opacity: 100;
+  visibility: visible;
+}
+
+.custom-active {
+  z-index: 2;
+}
+
+.custom-body {
+  height: 100%;
+  padding-right: 4%;
+}
+
+.custom-body * {
+  font-family: var(--lora);
+}
+
+.custom-date {
+  text-align: right;
+  font-size: var(--deskt-2-5-rem);
+  font-style: italic;
+  color: var(--color-main);
+  flex-grow: 1;
+}
+
+.custom-main {
+  flex-grow: 2;
+}
+
+.custom-title {
+  font-size: var(--deskt-1-8-rem);
+  margin-bottom: 2rem;
+}
+
+.custom-desc {
+  font-family: var(--jarkata);
+}
+
+.custom-btn-theme {
+  color: var(--color-main);
+  font-style: italic;
+  text-align: left;
+  font-size: var(--deskt-2-5-rem);
+
+  padding: 0;
+
+  flex-grow: 1;
+}
+
+.my-custom {
+  margin-bottom: 100px;
+}
+
+/* about sect */
+.sect-4 {
+  background-color: #181616;
+}
+
+.about-container {
+  margin-top: 110px;
+}
+
+#aboutcarousel {
+  margin-right: 60px;
+  margin-bottom: 100px;
+}
+
+.about-carousel::after {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--color-main);
+
+  transform: translate(-40px, -40px);
+}
+
+.about-inner {
+  z-index: 1;
+}
+
+.about-title,
+.about-desc {
+  font-family: var(--lora);
+}
+
+.about-title {
+  font-size: var(--deskt-4-rem);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 150%;
+  color: var(--color-main);
+}
+
+.about-desc {
+  margin-top: 60px;
+  font-size: var(--deskt-2-rem);
+  font-weight: 400;
+  line-height: 200%;
+}
+
+.about-indicators button {
+  position: relative;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+  background-color: var(--color-main) !important;
+}
+
+.about-indicators button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--color-main);
+  opacity: 0;
+}
+
+.about-indicators button.active::after {
+  opacity: 1;
+}
+
+.about-indicators {
+  bottom: -80px;
+}
+
+/* sect-5 partner */
+.sect-5 {
+  background-color: var(--nav-bg-2);
+}
+
+.partner-title {
+  padding: 60px 0;
+}
+
+.partner-title * {
+  font-weight: 500;
+  font-size: var(--deskt-2-rem);
+  color: var(--color-main);
+  font-family: var(--lora);
+  font-style: italic;
+}
+
+.partner-list-2 {
+  margin-bottom: 60px;
+}
+
+/* sect-6 news */
+
+/* sect-7 subscribe */
+.sect-7 * {
+  color: black;
+}
+
+.subscribe-heading {
+  font-weight: 800;
+  font-size: var(--deskt-2-rem);
+}
+
+.subscribe-list li {
+  list-style: disc;
+  list-style-position: inside;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+}
+
+.subscribe-btn {
+  margin-top: 50px;
+}
+
+.subscribe-btn button {
+  text-transform: uppercase;
+  border-radius: 0%;
+  border: 2px solid;
+  font-weight: 700;
+  padding: 10px 50px;
+}
